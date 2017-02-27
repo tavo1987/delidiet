@@ -1,0 +1,10 @@
+*.log
+.DS_Store
+prepros-6.config
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+*.sass-cache/*
+node_modules/
+bower_components/
+gulpfile.js

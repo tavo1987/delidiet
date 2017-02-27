@@ -1,0 +1,39 @@
+
+/*
+    ===============================================
+        $STYLES
+    ===============================================
+*/
+
+//LOST GRID
+@lost flexbox flex;
+
+//LIB
+@import "lib/settings";
+@import "lib/animate";
+@import "lib/mixins";
+@import "lib/placeholders";
+
+//BASE STYLES
+@import '../../../node_modules/foundation-sites/dist/css/foundation-flex';
+@import "base/wordpress";
+@import "base/base";
+
+//ELEMENTS
+
+
+//ABSTRATIONS
+@import "abstractions/buttons";
+@import "abstractions/pagination";
+
+//THEME
+@import "theme/button-top";
+@import "theme/header";
+@import "theme/banner";
+@import "theme/main-menu";
+@import "theme/search";
+@import "theme/widgets";
+@import "theme/footer";
+@import "theme/page";
+@import "theme/comments";
+
