@@ -1,36 +1,82 @@
 
 /*==============================================================================*/
-/*	MAIN MENU
+/*  MAIN MENU
 /*==============================================================================*/
 
-.container-menu{
+.navigation {
+    display: block;
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    left: -100%;
+    z-index: 100;
+    border-top: 1px solid rgba($black, .8);
+    transition: all .3s;
 
-   .menu{
+    &.active-menu {
+        left: 0;
+    }
 
-      @media screen  and(min-width: 64.5em){
-         display: flex;
-      }
+    .sp-menu{
+        overflow-y: auto;
+        height: calc(100vh - 120px);
+        width: 70%;
+        background: rgba($black, .85);
+        margin: 0;
 
-      a{
-         color: $link-color;
-      }
+        .menu-item{
+            margin: 0;
+        }//END MENU ITEMS
 
-      li{
-         display: block;
-         position: relative;
-      }
+        .menu-item-has-children{
+            > a{
+                position:relative;
+                &:before {
+                    color: $white;
+                    font-family: "delidiet" !important;
+                    content: "\25BC";
+                    font-size: .75rem;
+                    position:absolute;
+                    right: .75rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }//END ANCHORE
+                &.active {
+                    background: rgba($base-color, .5);
+                    &:before {
+                        content: "\25B2";
+                    }
+                }//END ACTIVE CLASS
+            }//END ANCHORE
+        }//END ITEM HAS CHILDREEN
 
-      li ul{
-         //display: none;
-         background: $base-color;
-         left: 0;
-         position: absolute;
-      }
+        a{
+            @include fontSize(16);
+            border-bottom: 1px solid rgba($white, .2);
+            color: $white;
+            display: block;
+            text-transform: uppercase;
+            padding: .5rem .5rem .5rem 1rem;
+            text-decoration: none;
+        }//END ANCHORE
 
-      li:hover > .container-submenu > ul{
-         display: block;
-      }
+        .sub-menu {
+            display: none;
+            margin: 0;
+            .menu-item {
+                border-bottom: 0;
+            }//END MENU ITEM
+            a{
+                padding-left: 2rem;
+                @include fontSize(12);
+            }//END ANCHORE
 
-   }//FIN MENU
-
+            .sub-menu {
+                display: none;
+                a{
+                    padding-left: 2.75rem;
+                }
+            }
+        }//END SUBMENU
+    }//FIN MENU
 }//FIN CONTAINER MENU
