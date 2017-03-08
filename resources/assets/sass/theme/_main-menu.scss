@@ -9,9 +9,15 @@
     top: 120px;
     width: 100%;
     left: -100%;
-    z-index: 100;
+    z-index: 1000;
     border-top: 1px solid rgba($black, .8);
     transition: all .3s;
+    @include media-query('desktop') {
+        position: static;
+        border-top: none;
+        padding-top: .25rem;
+        display: flex;
+    }
 
     &.active-menu {
         left: 0;
@@ -23,32 +29,19 @@
         width: 70%;
         background: rgba($black, .85);
         margin: 0;
+        @include media-query('desktop') {
+            display: flex;
+            overflow-y: visible;
+            width: 100%;
+            background:transparent;
+            height: auto;
+            margin: 0 auto;
+            justify-content: center;
+        }//END MEDIA QUERY
 
         .menu-item{
             margin: 0;
         }//END MENU ITEMS
-
-        .menu-item-has-children{
-            > a{
-                position:relative;
-                &:before {
-                    color: $white;
-                    font-family: "delidiet" !important;
-                    content: "\25BC";
-                    font-size: .75rem;
-                    position:absolute;
-                    right: .75rem;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }//END ANCHORE
-                &.active {
-                    background: rgba($base-color, .5);
-                    &:before {
-                        content: "\25B2";
-                    }
-                }//END ACTIVE CLASS
-            }//END ANCHORE
-        }//END ITEM HAS CHILDREEN
 
         a{
             @include fontSize(16);
@@ -56,27 +49,175 @@
             color: $white;
             display: block;
             text-transform: uppercase;
-            padding: .5rem .5rem .5rem 1rem;
+            padding: .5rem 0rem .5rem 1rem;
             text-decoration: none;
+            transition: all .3s;
+            @include media-query('desktop') {
+                border-bottom: none;
+                position: relative;
+                padding: 1.35rem  0 1rem 0;
+                margin: 0 .5rem;
+                &:after {
+                    transition: all .3s;
+                    position: absolute;
+                    content: "";
+                    height: 2px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    background: $white;
+                }//END AFTER
+
+                &:hover:after {
+                    width: 100%;
+                }
+            }//END MEDIA QUERY
         }//END ANCHORE
 
         .sub-menu {
             display: none;
             margin: 0;
+            @include media-query('desktop') {
+                display: block;
+                top: calc(100% + 50px);
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba($black, .8);
+                min-width: 225px;
+                position:absolute;
+                border: 1px hidden $submenu-border-color;
+                margin: auto;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all .6s;
+                z-index: -10;
+                &:before {
+                    content: url("../images/arrow.png");
+                    position: absolute;
+                    line-height: 0;
+                    bottom: 100%;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin:auto;
+                }//END BEFORE
+            }//END MEDIA QUERY
+
             .menu-item {
                 border-bottom: 0;
+                @include media-query('desktop') {
+                    &:first-child {
+                        padding-top: .75rem;
+                    }
+
+                    &:last-child {
+                        padding-bottom: .75rem;
+                    }
+                }//END MEDIA QUERY
             }//END MENU ITEM
+
             a{
                 padding-left: 2rem;
-                @include fontSize(12);
+                @include fontSize(14);
+                color: $submenu-link-color;
+
+                @include media-query('desktop') {
+                    margin: 0;
+                    padding: .5rem 1.5rem .5rem 1.5rem;
+                    &:hover {
+                        color: $white;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }//END MEDIA QUERY
             }//END ANCHORE
 
             .sub-menu {
                 display: none;
+                @include media-query('desktop') {
+                    display: block;
+                    transform: translateX(0);
+                    top: 30%;
+                    left: 100%;
+                    transition: all .6s;
+                    opacity: 0;
+                    &:before {
+                        display: none;
+                    }
+                }//END MEDIA QUERY
+
                 a{
                     padding-left: 2.75rem;
                 }
-            }
+            }//END SUBMENU
         }//END SUBMENU
+
+        .menu-item-has-children{
+            position: relative;
+            @include media-query('desktop') {
+                z-index: 100;
+                &:hover {
+                    > .sub-menu {
+                        display: block;
+                        border: 1px solid $submenu-border-color;
+                        border-top: none;
+                        height: auto;
+                        opacity: 1;
+                        overflow: visible;
+                        top: calc(100% + 10px);
+                        z-index: 999;
+                    }//END SUBMENU
+                }//END HOVER
+            }//END MEDIA QUERY
+
+            > a{
+                position:relative;
+                &:before {
+                    color: $white;
+                    content: "\25BC";
+                    font-size: .75rem;
+                    position:absolute;
+                    right: .75rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include media-query('desktop') {
+                        display: none;
+                    }//END MEDIA QUERY
+                }//END BEFORE
+
+                &.active {
+                    background: rgba($base-color, .5);
+                    &:before {
+                        content: "\25B2";
+                        @include media-query('desktop') {
+                            display: none;
+                        }
+                    }//END BEFORE
+
+                    @include media-query('desktop') {
+                        background: initial;
+                    }
+                }//END ACTIVE CLASS
+            }//END ANCHORE
+        }//END ITEM HAS CHILDREEN
+
+        @include media-query('desktop') {
+            .sub-menu  .menu-item-has-children:hover .sub-menu{
+                top: -1px;
+                height: auto;
+                min-width: 225px;
+                border: 1px solid $submenu-border-color;
+                width: 100%;
+                opacity: 1;
+                border-left: none;
+            }//END SUB MENU
+        }//END  MEDIA QUERY
     }//FIN MENU
 }//FIN CONTAINER MENU
