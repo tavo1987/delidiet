@@ -13,6 +13,9 @@
     display: block;
     cursor:pointer;
     z-index: 100;
+    @include media-query('desktop') {
+        display: none;
+    }
 
     &:after,
     &:before {
