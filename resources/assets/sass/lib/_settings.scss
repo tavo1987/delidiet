@@ -22,7 +22,6 @@ $bg-color: #F2F2F2;
 
 $width-icon-menu : 30px;
 
-
 // $colores
 $white:     #fff;
 $black:     #000;
@@ -30,6 +29,12 @@ $dark:      #222;
 $dark-light: #333;
 $gray:      #ccc;
 $dark-gray:  darken($gray,25%);
+
+//MAIN MENU COLORS
+$submenu-link-color: rgba($white, .7);
+$submenu-border-color: rgba($white, .2);
+
+
 
 
 //colores fuentes
