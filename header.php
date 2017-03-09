@@ -33,7 +33,7 @@
 
         <span id="toggle-menu" class="icon-menu" role="button"></span>
 
-        <nav role="navigation" class="navigation">
+        <nav role="navigation" class="navigation" id="main-navigation">
             <?php wp_nav_menu([
                 'theme_location' => 'main',
                 'menu_class'     => 'sp-menu',
