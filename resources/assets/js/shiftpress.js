@@ -4,46 +4,49 @@ jQuery(document).foundation();
 
 jQuery(document).ready(function ($) {
 
-    function offMainMenu() {
-        var buttonMenu    = $('#toggle-menu');
-        var buttonSubmenu = $('.menu-item-has-children a');
+    var buttonMenu    = $('#toggle-menu');
+    var buttonSubmenu = $('.menu-item-has-children a');
+    var menu          = $('#main-navigation');
+    var submenu       = $('#main-navigation .sub-menu');
 
+    function offMainMenu() {
         buttonMenu.off();
         buttonSubmenu.off();
     }
 
     function mainMenu() {
-        var buttonMenu    = $('#toggle-menu');
-        var menu          = $('.navegation');
-        var buttonSubmenu = $('.menu-item-has-children a');
-        var submenu       = $('.sub-menu');
-
-        buttonMenu.on('click',function(event) {
-            $(this).toggleClass('menu-opened');
-            $(this).next(menu).toggleClass('active-menu');
-        });//END TOGGLE MENU
-
-        buttonSubmenu.on('click', function(event) {
-            event.preventDefault();
-            $(this).toggleClass('active');
-            $(this).next(submenu).stop().slideToggle();
-        });//END BUTTONS SUBMENU
     }
 
-    if ($(window).width() < 1024) {
-        mainMenu();
+    function resetMenu() {
+        buttonMenu.removeClass('menu-opened');
+        buttonSubmenu.removeClass('active');
+        submenu.removeAttr('style');
+        menu.removeClass('active-menu');
     }
 
-    $(window).resize(function () {
-        console.log($(window).width());
-        if ($(window).width() >= 1024) {
+
+    $(window).on('load resize', function(event) {
+
+        if ($(window).width() > 1000) {
             $("nav > ul, nav > ul  li  ul").removeAttr("style");
             offMainMenu();
-        }
+            console.log('desktop');
+        }else {
 
-        if ($(window).width() < 1024) {
-            //$("nav > ul, nav > ul  li  ul").removeAttr("style");
-            mainMenu();
+            resetMenu();
+            buttonMenu.on('click',function(event) {
+                $(this).toggleClass('menu-opened');
+                $(this).next(menu).toggleClass('active-menu');
+            });//END TOGGLE MENU
+
+            buttonSubmenu.on('click', function(event) {
+                event.preventDefault();
+                $(this).toggleClass('active');
+                $(this).next(submenu).stop().slideToggle();
+                event.stopPropagation();
+            });//END BUTTONS SUBMENU
+            console.log('mobile');
         }
-    });//END RESIZE
+    });
+
 });
