@@ -1,0 +1,36 @@
+
+.sp-slider {
+    position: relative;
+}
+
+.slider-info {
+    //position: absolute;
+    color: $white;
+    //top: 120px;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    border: 1px solid rgba($white, .7);
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    background: rgba($black, .7);
+
+    &__logo {
+        max-width: 125px;
+        margin-bottom: .75rem;
+    }
+
+    &__title {
+        font-size: 3.25rem;
+        line-height: 1;
+        color: $white;
+        font-weight: 300;
+        margin-bottom: .5rem;
+        span{
+        }
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        margin-bottom: .75rem;
+    }
+}//END SLIDER INFO
