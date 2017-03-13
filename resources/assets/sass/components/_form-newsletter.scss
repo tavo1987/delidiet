@@ -1,0 +1,44 @@
+/*
+    ====================================================================
+        $FOOTER SIDE BAR
+    ====================================================================
+*/
+
+.form-newsletter{
+    display: flex;
+    max-width: 280px;
+    margin:0 auto 1rem auto;
+    @include media-query('tablet') {
+        position: relative;
+        margin-right: 0;
+        .ajax-loader{
+            position: absolute;
+            right: 50px;
+            top: 15px;
+        }
+    }
+
+    input[type=submit],
+    input[type=email],
+    input[type=text] {
+       height: 2.75rem;
+       border-right:none;
+    }
+
+    input[type=submit] {
+        padding: 0 .85rem;
+    }
+
+    &__button {
+       padding-left: .75rem;
+    }
+}//END TITLE
+
+
+.footer .form-newsletter{
+    input[type=email]{
+        border-right: none;
+        margin-bottom: 0;
+    }
+
+}
