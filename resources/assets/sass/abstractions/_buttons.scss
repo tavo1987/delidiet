@@ -7,19 +7,47 @@
 -----------------------------------------------------------------*/
 
 .button{
-	background:$base-color;
-	color: #fff;
-	cursor: pointer;
+	@extend  %button;
 
-	&:hover{
-		background:lighten($base-color,10);
-		color: #fff;
-	}
+    &--plus {
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        padding: .5rem .5rem .5rem 0rem ;
+        margin-bottom: 0;
+        background: initial;
+        font-size: .85rem;
 
-	&:focus{
-		background:$base-color;
-		color: #fff;
-	}
+        &:hover {
+            color: $base-color;
+            text-decoration: none;
+            background: initial;
+        }
 
-}
+        .icon-plus {
+            position: relative;
+        }
+
+        .icon-plus:before {
+            transition: all .5s;
+            display: block;
+            margin-right: .75rem;
+            content: '+';
+            line-height: 25px;
+            min-height: auto;
+            width: 40px;
+            height: 40px;
+            font-size: 2.5rem;
+            background: rgba($black, .4);
+            position: relative;
+            border-radius: 50%;
+            text-align: center;
+            border: 1px solid rgba($white, .3)
+        }
+
+        &:hover .icon-plus:before{
+            transform: rotate(180deg);
+        }
+    }//PLUS BUTTON
+}//END BUTTON
 
