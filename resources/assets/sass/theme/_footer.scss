@@ -1,12 +1,33 @@
-
-
-
-
-/*---------------------------------------------------------------
-	$footer
------------------------------------------------------------------*/
+/*
+    ====================================================================
+        $FOOTER
+    ====================================================================
+*/
 
 .footer{
 	text-align: left;
-	position: relative;	
-}
+	position: relative;
+    padding-top: 2rem;
+    text-align: center;
+    &__logo {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        @include media-query('tablet') {
+            padding-top: .5rem;
+        }
+
+        img {
+            max-width: 160px;
+        }
+    }//END LOGO
+
+    .copyright {
+        margin-bottom: 2rem;
+        a{
+            color: $font-color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}//END FOOTER
