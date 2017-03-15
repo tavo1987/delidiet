@@ -1,0 +1,61 @@
+/*
+    ====================================================================
+        $FRONT PAGE
+    ====================================================================
+*/
+
+
+.front-page {
+    text-align: justify;
+}//END FRONT PAGE
+
+.section {
+    padding-top: 2.75rem;
+    padding-bottom: 1rem;
+    h1,h2,h3, h4 {
+        //color: $font-color;
+    }
+
+    img{
+        margin-bottom: .5rem;
+    }
+
+    &__header {
+        margin-bottom: 1.15rem;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+        font-weight: 300;
+        line-height: 1.1;
+        &--white {
+            color: $white;
+        }
+
+        &--big {
+            font-size: 3.5rem;
+        }
+    }//END TITLE
+
+    &__description{
+        font-size: 1rem;
+        max-width: 450px;
+        margin-bottom: 2rem;
+        &--white {
+            color: $white;
+        }
+    }
+
+    &--align-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        min-height: 750px;
+        @include media-query('desktop') {
+            min-height: auto;
+        }
+    }
+}//END SECTIOON
