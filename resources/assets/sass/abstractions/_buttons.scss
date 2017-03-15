@@ -17,6 +17,7 @@
         margin-bottom: 0;
         background: initial;
         font-size: .85rem;
+        font-weight: bold;
 
         &:hover {
             color: $base-color;
@@ -48,6 +49,13 @@
         &:hover .icon-plus:before{
             transform: rotate(180deg);
         }
+
+        &--gray {
+            color: $font-color;
+            .icon-plus:before{
+                color: $white;
+            }
+        }//PLUS BUTTON
     }//PLUS BUTTON
 }//END BUTTON
 
