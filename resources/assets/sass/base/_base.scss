@@ -90,6 +90,26 @@ li.current-menu-item,.page_item{
 	background-color: $bg-color;
 }
 
+.padding-top {
+	padding-top: 1rem;
+	&--small{
+		padding-top: 1rem;
+		@include media-query('tablet') {
+			padding-top: 0;
+		}
+	}//END MEDIA QUERY
+
+	&--medium{
+		padding-top: 0;
+		@include media-query('tablet') {
+			padding-top: 1rem;
+		}
+		@include media-query('desktop') {
+			padding-top: 0;
+		}
+	}//END MEDIA QUERY
+}
+
 .sp-content {
 
 	.video-container {
@@ -134,3 +154,7 @@ li.current-menu-item,.page_item{
 		}
 	}
 }//END GENERAL STYLES
+
+.responsive-embed {
+	margin-bottom: 0;
+}
