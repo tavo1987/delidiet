@@ -24,6 +24,11 @@
             background: initial;
         }
 
+        &:focus {
+            outline: none;
+            background: initial;
+        }
+
         .icon-plus {
             position: relative;
         }
@@ -53,6 +58,10 @@
             color: $font-color;
             .icon-plus:before{
                 color: $white;
+            }
+
+            &:focus {
+                color: $base-color;
             }
         }//PLUS BUTTON
     }//PLUS BUTTON
