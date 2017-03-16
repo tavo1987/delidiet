@@ -1,6 +1,38 @@
-
-
-
 /*=================================================================
-	PAGE
+    PAGE
 ===================================================================*/
+
+.sp-page{
+    .sp-what-is{
+        color: $base-color;
+        text-align: center;
+    }//END SP-WHAT-IS
+    .what-content{
+        text-align: justify;
+        display: flex;
+        justify-content: space-around;
+    }
+}//END SP-PAGE
+
+.steps{
+    width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     
+}
+
+.sp-video{
+    background: #ececec;
+    margin-bottom: 4rem;
+
+    .info-video{
+        display: block;
+        margin: auto;
+    }
+}
+
+.girl-video{
+        display: block;
+        margin: auto
+    }
+
