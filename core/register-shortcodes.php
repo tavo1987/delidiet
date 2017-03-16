@@ -1,5 +1,10 @@
 <?php
 
+require_once 'shortcodes/SectionOne.php';
+ $sectionone = new SectionOne();
+
+
+
 /**
  * Register here the shortcodes, for the theme
  */
