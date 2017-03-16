@@ -57,4 +57,14 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //ADD BACKGROUND PAGE FEATURED IMAGE
+    $( ".sp-page__header" ).each(function() {
+        var attr = $(this).attr('data-page-featured-image');
+        if (typeof attr !== typeof undefined && attr !== false) {
+          $(this).css({
+            'background': 'url('+attr+')',
+          });
+        }
+    });
+
 });
