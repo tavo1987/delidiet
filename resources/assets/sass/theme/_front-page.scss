@@ -35,6 +35,10 @@
             color: $white;
         }
 
+        &--green {
+            color: $base-color;
+        }
+
         &--big {
             font-size: 3.5rem;
         }
@@ -47,9 +51,13 @@
             font-size: 1.45rem;
         }
 
+         &--padding-top{
+            padding-top: 2rem;
+        }
+
         &--padding-top-large{
             @include media-query('desktop') {
-                padding-top: 1rem;
+                padding-top: 1.75rem;
             }
         }
     }//END TITLE
@@ -60,6 +68,14 @@
         margin-bottom: 2rem;
         &--white {
             color: $white;
+        }
+
+        &--full-width {
+            max-width: initial;
+        }
+
+        &--padding-bottom-none {
+            margin-bottom: .75rem;
         }
     }
 
@@ -74,7 +90,6 @@
         }
     }
 
-
     &--padding-left {
         @include media-query('desktop') {
             padding-left: 2.5rem;
@@ -82,20 +97,20 @@
     }
 
     &--padding-bottom-none{
-        padding-bottom: 3rem;
+        padding-bottom: 0;
     }
 
     &--padding-top-none{
         padding-top: 0;
     }
 
+    &--padding-top {
+        padding-top: 2rem;
+    }
+
 }//END SECTIOON
 
 .section-two {
-    @include media-query('desktop') {
-
-    }//END MEDIA QUERY
-
     @include media-query('desktop') {
         p{
             max-width: 325px;
@@ -105,6 +120,15 @@
 }//END SECTION
 
 .background-section {
+
+    &.parallax{
+        background-attachment: fixed !important;
+        background-position: center top !important;
+        min-height: 500px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+    }
 
     &--hide-small {
         @media screen and (max-width: map-get($breakpoints-sp, 'smartphone') ) {
@@ -118,3 +142,23 @@
         }//END MEDIA QUERY
     }
 }//END BACKGROUND
+
+.featured-section {
+    position: relative;
+    &__header {
+        background: $white;
+        z-index: 100;
+    }
+
+    &__image {
+        display: inline;
+        position: relative;
+        top: calc(20% - 1px);
+    }
+
+    &__content {
+        padding-top: 0rem;
+        z-index: 50;
+        position: relative;
+    }
+}//eEND
