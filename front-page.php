@@ -6,6 +6,7 @@
 </section>
 
 <section role="main" class="content front-page">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!--=====================================================
             SECTION ONE
         =====================================================-->
@@ -19,6 +20,7 @@
                             <img src="http://delidiet.dev/wp-content/uploads/logo-scarsdale-1.png" alt="Test">
                         </div><!-- . /END HEADER-->
                         <p class="section__description">
+                        <?php the_content(); ?>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis rem laudantium, debitis eum sapiente mollitia beatae cumque,
                             quam doloribus, cupiditate ut aliquam at sunt! Similique eius earum magnam iste officiis?
                         </p>
@@ -187,6 +189,8 @@
             </div><!-- . /END COLUMN-->
         </div><!-- . /END ROW-->
     </div><!-- ./ BACKGROUND SECTION-->
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section><!-- ./END MAIN-->
 
 <?php get_footer(); ?>
