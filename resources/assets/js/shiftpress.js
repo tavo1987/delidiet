@@ -45,4 +45,16 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //ADD BACKGROUND COLUMN BUTTOM
+    $( ".background-section" ).each(function() {
+        var attr = $(this).attr('data-background-src');
+
+        if (typeof attr !== typeof undefined && attr !== false) {
+          $(this).css({
+            'background': 'url('+attr+') no-repeat bottom right',
+
+          });
+        }
+    });
+
 });
