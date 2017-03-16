@@ -1,160 +1,183 @@
 /*
-	=============================================
-		$GENERALS STYLES
-	=============================================
+    =============================================
+        $GENERALS STYLES
+    =============================================
 */
 
 
 html{
-	font-size: 16px;
-	box-sizing: border-box;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body{
-	font-family: $font-family;
-	color: $font-color;
+    font-family: $font-family;
+    color: $font-color;
 }
 
 a{
-	text-decoration: none;
-	color: $base-color;
-	transition: all .3s;
-	&:hover {
-		color: darken($base-color, 10);
-		text-decoration: underline;
-	}
+    text-decoration: none;
+    color: $base-color;
+    transition: all .3s;
+    &:hover {
+        color: darken($base-color, 10);
+        text-decoration: underline;
+    }
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: $font-family;
-	font-weight: normal;
-	margin-bottom: 0.75rem;
-	color: $base-color;
+    font-family: $font-family;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    color: $base-color;
 }
 
-h1{	@include fontSize(30);}
+h1{ @include fontSize(30);}
 
-h2{	@include fontSize(28);}
+h2{ @include fontSize(28);}
 
-h3{	@include fontSize(24);}
+h3{ @include fontSize(24);}
 
-h4{	@include fontSize(20);}
+h4{ @include fontSize(20);}
 
-h5{	@include fontSize(18);}
+h5{ @include fontSize(18);}
 
-h6{	@include fontSize(16);}
+h6{ @include fontSize(16);}
 
 p{
-	margin-bottom: 1rem;
-	font-size: $font-size;
+    margin-bottom: 1rem;
+    font-size: $font-size;
 }
 
 article{
-	text-align: justify;
+    text-align: justify;
 }
 
 
 img{
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /*para verificar el item seleccionado del menu*/
 li.current-menu-item,.page_item{
-	color: $base-color !important;
+    color: $base-color !important;
 
 }
 
 .bg-basecolor{
-	background-color:$base-color;
+    background-color:$base-color;
 }
 
 .radius {
-	border-radius: $radius;
+    border-radius: $radius;
 }
 
 .gray-color {
-	color: $font-color;
+    color: $font-color;
 }
 .bg-color {
-	background-color: $bg-color;
+    background-color: $bg-color;
 }
 
 .padding-top {
-	padding-top: 1rem;
-	&--small{
-		padding-top: 1rem;
-		@include media-query('tablet') {
-			padding-top: 0;
-		}
-	}//END MEDIA QUERY
+    padding-top: 1rem;
+    &--small{
+        padding-top: 1rem;
+        @include media-query('tablet') {
+            padding-top: 0;
+        }
+    }//END MEDIA QUERY
 
-	&--medium{
-		padding-top: 0;
-		@include media-query('tablet') {
-			padding-top: 1rem;
-		}
-		@include media-query('desktop') {
-			padding-top: 0;
-		}
-	}//END MEDIA QUERY
+    &--medium{
+        padding-top: 0;
+        @include media-query('tablet') {
+            padding-top: 1rem;
+        }
+        @include media-query('desktop') {
+            padding-top: 0;
+        }
+    }//END MEDIA QUERY
 }
 
-.sp-content {
+.padding-right {
+    padding-right: 1rem;
+    &--small{
+        padding-right: 1rem;
+        @include media-query('tablet') {
+            padding-right: 0;
+        }
+    }//END MEDIA QUERY
 
-	.video-container {
-		position: relative;
-		padding-bottom: 56.25%; /* 16:9 */
-		padding-top: 25px;
-		height: 0;
-		margin-bottom: .75rem;
-	}
+    &--medium{
+        @include media-query('tablet') {
+            padding-right: 2rem;
+        }
+        @include media-query('desktop') {
+            padding-right: 0;
+        }
+    }//END MEDIA QUERY
 
-	.video-container iframe,
-	.video-container object,
-	.video-container embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+    &--large{
+        @include media-query('desktop') {
+            padding-right: 2rem;
+        }
+    }//END MEDIA QUERY
+}//END PADDING RIGHT
 
-	ol,ul {
-	   	padding-left: 1rem;
-	}
+.padding-left {
+    padding-left: 2rem;
+    &--small{
+        padding-left: 2rem;
+        @include media-query('tablet') {
+            padding-left: 0;
+        }
+    }//END MEDIA QUERY
 
-	ul {
-	   	text-indent: 2px;
-	   	list-style-position: outside;
-		li:before {
-	    	content: '✔';
-	    	font-weight: bold;
-	    	margin-right: .75rem;
-		}
-	}
+    &--medium{
+        @include media-query('tablet') {
+            padding-left: 2rem;
+        }
+        @include media-query('desktop') {
+            padding-left: 0;
+        }
+    }//END MEDIA QUERY
 
-	blockquote {
-		background: lighten($bg-color, 1);
-		border-left: 3px solid $base-color;
-		font-style: italic;
-		padding:.5rem 1rem;
-		p{
-			margin: 0;
-		}
-	}
-}//END GENERAL STYLES
+    &--large{
+        @include media-query('desktop') {
+            padding-left: 2rem;
+        }
+    }//END MEDIA QUERY
+}//END PADDING LEFT
+
 
 .responsive-embed {
-	margin-bottom: 0;
+    margin-bottom: 0;
+}
+
+.row {
+    max-width: $max-width;
+    &--padding-top {
+        padding-top: 3rem;
+    }
+    &--padding-bottom {
+        padding-bottom: 2rem;
+    }
+}
+
+.border-right-dashed {
+    border-right: none;
+    @include media-query('desktop') {
+        border-right: 2px dashed $font-color;
+    }
 }
