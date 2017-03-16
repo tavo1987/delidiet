@@ -47,7 +47,7 @@
             </div><!-- . /END ROW-->
         </div><!-- . /END COLUMNS-->
 
-        <div class="small-12 large-4 columns section section--white section--align-bottom"
+        <div class="small-12 large-4 columns section section--align-bottom section--padding-left"
             style="background: url('http://delidiet.dev/wp-content/uploads/background-almuerzo-light.jpg');
             background-size: cover;"
             >
@@ -69,54 +69,59 @@
     <!--=====================================================
             SECTION TWO
         =====================================================-->
-    <div class="row">
-        <div class="small-12 large-8 columns">
-            <div class="row">
-                <div class="small-12 columns section"
-                style="background: url('http://delidiet.dev/wp-content/uploads/background-frutas.jpg') no-repeat right;
-                background-size: contain;"
-                >
-                   <div class="section__header">
-                        <img src="http://delidiet.dev/wp-content/uploads/logo-scarsdale-1.png" alt="Test">
-                        <h2 class="section__title section__title--big">DIETA de <br> <strong>14 días</strong></h2>
-                    </div><!-- . /END HEADER-->
-                    <div class="section__subtitle">
-                        <h3 class="gray-color">
-                            PROGRAMA PARA <br>
-                            ADELGAZAR DE UNA <br>MANERA SANA Y RÁPIDA
-                        </h3>
-                    </div><!-- . /END SUBTITLE SECTION4-->
-                    <p class="section__description">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
-                    </p>
-                    <a href="#" class="button button--plus button--plus--gray">
-                       <i class="icon-plus"></i>
-                       SABER MAS
-                   </a>
-                </div><!-- . /END COLUMN-->
-            </div><!-- . /END ROW-->
-        </div><!-- . /END COLUMN-->
+    <div class="section-two bg-color">
+        <div class="row">
+            <div class="small-12 large-8 columns background-section background-section--hide-small" data-background-src="http://delidiet.dev/wp-content/uploads/background-fruits.png">
 
-        <div class="small-12 large-4 columns">
-            <div class="row">
-                <div class="small-12 columns section">
-                    <h2 class="section__title gray-color"><strong>SIN</strogn> <br>PASTILLAS</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
-                    </p>
-                </div>
-                <div class="small-12 columns section">
-                    <div class="section__header">
-                        <h2 class="section__title"><strong class="gray-color">SERVICIO A</strong><br">DOMICILIO</h2>
+                    <div class=" section">
+                       <div class="section__header">
+                            <img src="http://delidiet.dev/wp-content/uploads/logo-scarsdale-1.png" alt="Test">
+                            <h2 class="section__title section__title--big">DIETA de <br> <strong>14 días</strong></h2>
+                        </div><!-- . /END HEADER-->
+                        <div class="section__subtitle">
+                            <h3 class="gray-color">
+                                PROGRAMA PARA <br>
+                                ADELGAZAR DE UNA <br>MANERA SANA Y RÁPIDA
+                            </h3>
+                        </div><!-- . /END SUBTITLE SECTION4-->
+                        <p class="section__description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
+                        </p>
+                        <a href="#" class="button button--plus button--plus--gray">
+                           <i class="icon-plus"></i>
+                           SABER MAS
+                       </a>
+                    </div><!-- . /END SECTION-->
+
+            </div><!-- . /END COLUMN-->
+
+            <div class="small-12 large-4 columns">
+                <div class="row">
+                    <div class="small-12 columns section section--padding-left">
+                        <h2 class="section__title section__title--gray section__title--padding-top-large">
+                            <strong class="section__title--small">SIN</strong>
+                            <br/>PASTILLAS
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
+                        </p>
                     </div>
+                    <div class="small-12 columns section section--padding-left section--padding-top-none">
+                        <div class="section__header">
+                            <h2 class="section__title section__title--gray">
+                                <strong class="section__title--small">SERVICIO A</strong>
+                                <br>DOMICILIO
+                            </h2>
+                        </div>
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
-                    </p>
-                </div><!-- . /END COLUMN-->
-            </div><!-- . /END ROW-->
-        </div><!-- . /END COLUMN-->
-    </div><!-- . /END ROW-->
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
+                        </p>
+                    </div><!-- . /END COLUMN-->
+                </div><!-- . /END ROW-->
+            </div><!-- . /END COLUMN-->
+        </div><!-- . /END ROW-->
+    </div><!--./ END SECTION CONTAINER-->
 
 </section><!-- . /END MAIN-->
 
