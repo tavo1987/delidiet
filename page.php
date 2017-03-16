@@ -1,82 +1,82 @@
 <?php get_header(); ?>
-<section class="sp-content sp-page" role="main">
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="sp-page__header">
-            <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-            <h1 class="sp-page__title"><?php //the_title(); ?></h1>
-        </header>
-        <div class="row">
-            <div class="small-12 medium-6 large-9 columns">
-                <h1 class="sp-what-is">¿Qué <strong>es</strong>?</h1>
-            </div>
-        </div>
-        <section class="sp-page__content">
-            <div class="what-content">
-                <div class="row">
-                    <div class="small-12 medium-6 large-5 columns">
-                        <p class="sp-what-text">LA DIETA ES UN PROGRAMA DE 14 DÍAS
-                            <br> CON 14 DESAYUNOS, <br>14 ALMUERZOS
-                        Y 14 CENAS, PARA <br> ADELGAZAR SANA Y RÁPIDAMENTE</p>
-                    </div>
-                    <div class="small-12 medium-6 large-7 columns">
-                        <p>Es una dieta americana, médica, reconocida desde hace décadas por sis rápidos resultados. Tiene una duración de 14 días corridos, dentro de los cuales puede bajar un promedio de 5 a 12kg. (11 a 26 libras), resultados
-                            que dependen de variables como sexo, edad, nivel de obesidad, metabolismo y más que nada la disciplina con la que se sigue la dieta.
-                            <img src="http://delidiet.dev/wp-content/uploads/salad-bowl-1.jpg" alt="Bowl">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-12 medium-6 large-4 columns">
-                    <div class="icono">
-                        <img src="http://delidiet.dev/wp-content/uploads/icon-delivery.png">
-                    </div>
-                    <div class="steps">
-                        <h3>1 <br> PASO</h3>
-                    </div>
-                    <div class="descriptions">
-                        <p>RECIBE POR 14 DÍAS <br>
-                            NUESTRA DIETA EN <br>
-                        SU DOMICILIO U OIFINA</p>
-                    </div>
-                </div>
-                <div class="small-12 medium-3 large-4 columns">
-                    <div class="icono">
-                        <img src="http://delidiet.dev/wp-content/uploads/crockery.png">
-                    </div>
-                    <div class="steps">
-                        <h3>2 <br> PASO</h3>
-                    </div>
-                    <div class="descriptions">
-                        <p>RECIBE POR 14 DÍAS <br>
-                            NUESTRA DIETA EN <br>
-                        SU DOMICILIO U OIFINA</p>
-                    </div>
-                </div>
-                <div class="small-12 medium-6 large-4 columns">
-                    <div class="icono">
-                        <img src="http://delidiet.dev/wp-content/uploads/icon-human.png">
-                    </div>
-                    <div class="steps">
-                        <h3>3 <br> PASO</h3>
-                    </div>
-                    <div class="descriptions">
-                        <p>RECIBE POR 14 DÍAS <br>
-                            NUESTRA DIETA EN <br>
-                        SU DOMICILIO U OIFINA</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-bryan">
-                <img class="girl-video" src="http://delidiet.dev/wp-content/uploads/girl-recomendation.png">
-                <div class="sp-video">
-                    <iframe class="info-video" width="600" height="300" src="https://www.youtube.com/embed/apcUhQREnJ4" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <?php the_content(); ?>
-        </section>
-    </article>
-    <?php endwhile; endif; ?>
-</section>
+    <section class="sp-page" role="main">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php if ( has_post_thumbnail() ):?>
+                    <header class="sp-page__header" data-page-featured-image="<?php echo get_the_post_thumbnail_url() ?>">
+                        <h1 class="sp-page__title"><?php the_title(); ?></h1>
+                    </header>
+                <?php else: ?>
+                    <header class="sp-page__header bg-color"">
+                        <h1 class="sp-page__title"><?php the_title(); ?></h1>
+                    </header>
+                <?php endif; ?>
+
+                <div class="sp-page__content">
+                    <?php the_content(); ?>
+                    <div class="sp-steps">
+                        <div class="sp-steps__item">
+                            <img class="sp-steps__item__icon" src="http://delidiet.dev/wp-content/uploads/icon-delivery.png" alt="item">
+                            <div class="sp-steps__item__number">
+                                <span>1</span>
+                                <span>PASO</span>
+                            </div>
+                            <p class="sp-steps__item__description">
+                                RECIBE POR 14 DÍAS NUESTRA DIETA EN SU DOMICILIO U OFICINA
+                            </p>
+
+                        </div><!--./ END SP STEPS ITEMS-->
+
+                        <div class="sp-steps__item">
+                            <img class="sp-steps__item__icon" src="http://delidiet.dev/wp-content/uploads/crockery.png" alt="item">
+                            <div class="sp-steps__item__number">
+                                <span>2</span>
+                                <span>PASO</span>
+                            </div>
+                            <p class="sp-steps__item__description">
+                                DISFRUTE DE UN MENÚ BAJO EN CALORÍAS ALTAMENTE Y PROTÉICO
+                            </p>
+                        </div><!--./ END SP STEPS ITEMS-->
+
+                        <div class="sp-steps__item">
+                            <img class="sp-steps__item__icon" src="http://delidiet.dev/wp-content/uploads/icon-human.png" alt="item">
+                            <div class="sp-steps__item__number">
+                                <span>3</span>
+                                <span>PASO</span>
+                            </div>
+                            <p class="sp-steps__item__description">
+                                BAJE DE PESODE MANERA RÁPIDA Y EFECTIVA
+                            </p>
+                        </div><!--./ END SP STEPS ITEMS-->
+                    </div><!--./ END SP STEPS-->
+                    <!--=====================================================
+                            FEATURED SECTION
+                        =====================================================-->
+                    <div class="featured-section bg-color">
+                        <div class="featured-section__header">
+                            <div class="row">
+                                <div class="columns">
+                                    <img class="featured-section__image" src="http://delidiet.dev/wp-content/uploads/girl-recomendation.png" alt="Feaured section image">
+                                </div><!--./ COLUMNS-->
+                            </div><!--./ FEAURED ROW-->
+                        </div><!--./ FEAURED IMAGE HEADER-->
+
+                        <div class="row featured-section__content align-center">
+                            <div class="small-12 medium-12 large-12 columns section section--padding-top-none small-text-center">
+                                <div class="section__header">
+                                    <h2 class="section__title  section__title--green section__title--padding-botom section__title--padding-top" >
+                                        ¿Cómo <strong>funciona?</strong>
+                                    </h2>
+                                </div>
+                                <div class="responsive-embed widescreen">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/LlzFfE2gvcw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div><!-- . /END COLUMN-->
+                        </div><!-- . /END ROW-->
+
+                    </div><!-- . /END FEATURED SECTION-->
+                </div><!--./ END CONTENT-->
+            </article>
+        <?php endwhile; endif; ?>
+    </section>
 <?php get_footer(); ?>

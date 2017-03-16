@@ -124,6 +124,7 @@
     &.parallax{
         background-attachment: fixed !important;
         background-position: center top !important;
+        background-size: cover !important;
         min-height: 500px;
         display: flex;
         align-items: flex-end;
@@ -160,5 +161,8 @@
         padding-top: 0rem;
         z-index: 50;
         position: relative;
+        @include media-query('desktop') {
+            padding-top: 1rem;
+        }
     }
 }//eEND

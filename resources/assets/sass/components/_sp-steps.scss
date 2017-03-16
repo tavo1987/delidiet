@@ -1,0 +1,94 @@
+/*
+    =================================================================
+        SP STEPS
+    ===================================================================
+*/
+
+.sp-steps {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    margin: auto;
+    @include media-query('tablet') {
+        max-width: $max-width;
+        margin: auto;
+        display: flex;
+    }
+
+    &:before {
+        content: '';
+        height: calc(70% - 12px);
+        width: 2px;
+        background: $base-color;
+        left: 0;
+        position: absolute;
+        @include verticalAlign();
+        top: calc(50% - 10px);
+
+        @include media-query('tablet') {
+            max-width: initial;
+            width: 60%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: 1px;
+            top: calc(50% + 10px);
+        }//END BEFORE TABLET
+    }//END BEFORE
+
+    &__item {
+        max-width: 150px;
+        margin: 0 auto 2.5rem auto;
+        @include media-query('tablet') {
+            margin: 0 0 0rem 0;
+            width: 33.33%;
+            max-width: initial;
+        }//END MEDIA QUERY
+
+        &__icon {
+            margin-bottom: .75rem;
+        }
+
+        &__number {
+            width: 100px;
+            margin: auto;
+            padding: .85rem;
+            height: 100px;
+            color: $base-color;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: $white;
+            border-radius: 50%;
+            font-size: 1.45rem;
+            border: 1px solid $base-color;
+            margin-bottom: .75rem;
+            position: relative;
+
+            &:before {
+                content: '';
+                height: 1px;
+                width: 300%;
+                background: $base-color;
+                right: 100%;
+                position: absolute;
+                @include verticalAlign();
+                @include media-query('tablet') {
+                    display: none;
+                }
+            }//END BEFORE
+            span{
+                display: block;
+                &:first-child {
+                    font-size: 2.25rem;
+                }
+            }
+        }//END NUMBER
+
+        &__description {
+            line-height: 1.2;
+        }
+    }//END ITEM
+}//END SP STEPS
