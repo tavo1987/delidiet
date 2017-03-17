@@ -16,24 +16,30 @@
         display: flex;
     }
 
+    &--gray {
+        .sp-steps__item__number {
+            background: $bg-color;
+        }
+    }
+
     &:before {
         content: '';
-        height: calc(70% - 12px);
+        height: calc(70% - 20px);
         width: 2px;
         background: $base-color;
         left: 0;
         position: absolute;
         @include verticalAlign();
-        top: calc(50% - 10px);
+        top: calc(50% - 12px);
 
         @include media-query('tablet') {
             max-width: initial;
-            width: 60%;
+            width: 65%;
             right: 0;
             left: 0;
             margin: auto;
             height: 1px;
-            top: calc(50% + 10px);
+            top: 50%;
         }//END BEFORE TABLET
     }//END BEFORE
 
@@ -42,9 +48,14 @@
         margin: 0 auto 2.5rem auto;
         @include media-query('tablet') {
             margin: 0 0 0rem 0;
-            width: 33.33%;
+            width: 31.33%;
+            justify-content: space-around;
             max-width: initial;
         }//END MEDIA QUERY
+
+        p{
+            margin-bottom: 0;
+        }
 
         &__icon {
             margin-bottom: .75rem;
@@ -91,4 +102,10 @@
             line-height: 1.2;
         }
     }//END ITEM
+
+    &--gray {
+        &__item__number {
+            background: red;
+        }
+    }
 }//END SP STEPS
