@@ -165,12 +165,8 @@
     }
 
     &__image {
-        display: inline;
         position: relative;
-        top: calc(50% - 54px);
-        @include media-query('desktop') {
-            bottom: calc(100% - 90px);
-        }
+        top: 30.85%;
     }
 
     &__content {
