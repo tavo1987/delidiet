@@ -43,7 +43,7 @@
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 columns section"
-                        style="background: url('http://delidiet.dev/wp-content/uploads/background-imc-section.jpg');
+                        style="background: url(<?php  ?>'/wp-content/uploads/background-imc-section.jpg');
                         background-size: cover;">
                         <div class="section__header">
                             <h2 class="section__title section__title--white"> <?php the_field('titulo_2'); ?> </h2>
@@ -56,11 +56,11 @@
             </div><!-- . /END COLUMNS-->
 
             <div class="small-12 large-4 columns section section--align-bottom section--padding-left"
-                style="background: url('http://delidiet.dev/wp-content/uploads/background-almuerzo-light.jpg');
+                style="background: url(<?php echo get_site_url();?>'/wp-content/uploads/background-almuerzo-light.jpg');
                 background-size: cover;"
                 >
                 <div class="section__header">
-                    <img src="http://delidiet.dev/wp-content/uploads/almuerzo.png" alt="Logo">
+                    <img src="<?php echo get_site_url();?>/wp-content/uploads/almuerzo.png" alt="Logo">
                     <h2 class="section__title section__title--white  section__title--big" >
                      <?php the_field('titulo3'); ?>
                      </h2>
@@ -82,7 +82,7 @@
         =====================================================-->
     <div class="section-two bg-color">
         <div class="row">
-            <div class="small-12 large-8 columns background-section background-section--hide-small" data-background-src="http://delidiet.dev/wp-content/uploads/background-fruits.png">
+            <div class="small-12 large-8 columns background-section background-section--hide-small" data-background-src="<?php echo get_site_url();?>/wp-content/uploads/background-fruits.png">
                 <div class=" section">
                    <div class="section__header">
                    <?php
@@ -145,7 +145,7 @@
         <div class="featured-section__header">
             <div class="row">
                 <div class="columns">
-                    <img class="featured-section__image" src="http://delidiet.dev/wp-content/uploads/girl-recomendation.png" alt="Feaured section image">
+                    <img class="featured-section__image" src="<?php echo get_site_url();?>/wp-content/uploads/girl-recomendation.png" alt="Feaured section image">
                 </div><!--./ COLUMNS-->
             </div><!--./ FEAURED ROW-->
         </div><!--./ FEAURED IMAGE HEADER-->
@@ -189,7 +189,7 @@
     <!--=====================================================
             FOOTER BANNER
         =====================================================-->
-    <div class="background-section parallax" data-background-src="http://delidiet.dev/wp-content/uploads/banner.jpg">
+    <div class="background-section parallax" data-background-src="<?php echo get_site_url();?>/wp-content/uploads/banner.jpg">
         <div class="row align-center">
             <div class="small-12 medium-8 large-7 columns background-section">
                 <div class=" section">
