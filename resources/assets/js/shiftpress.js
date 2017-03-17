@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
             console.log('desktop');
         }else {
             buttonSubmenu.on('click', function(event) {
-                event.preventDefault();
+                //event.preventDefault();
                 $(this).toggleClass('active');
                 $(this).next(submenu).stop().slideToggle();
                 event.stopPropagation();
