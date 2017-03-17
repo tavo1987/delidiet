@@ -18,11 +18,11 @@
                         <div class="one-section section">
                             <div class="section__header">
                                 <h2 class="section__title section__title--big"><?php the_field('titulo'); ?></h2>
-                                <?php 
+                                <?php
 									$image = get_field('imagen_logo');
 									if( !empty($image) ): ?>
 										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-									<?php endif; ?>  
+									<?php endif; ?>
                             </div><!-- . /END HEADER-->
                             <p class="section__description">
                                 <?php the_field('descripcion'); ?>
@@ -85,11 +85,11 @@
             <div class="small-12 large-8 columns background-section background-section--hide-small" data-background-src="http://delidiet.dev/wp-content/uploads/background-fruits.png">
                 <div class=" section">
                    <div class="section__header">
-                   <?php 
+                   <?php
 						$image = get_field('imagen_logo');
 						if( !empty($image) ): ?>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>  
+						<?php endif; ?>
                         <h2 class="section__title section__title--big">
                         	<?php the_field('titulo_4'); ?>
                         </h2>
@@ -158,11 +158,11 @@
                             <h2 class="section__title  section__title--green section__title--padding-botom, section__title--padding-top" >
                                 <?php the_field('como_funciona'); ?>
                             </h2>
-                            <?php 
+                            <?php
 						$imagee = get_field('imagen_logo_');
 						if( !empty($image) ): ?>
 							<img src="<?php echo $imagee['url']; ?>" alt="<?php echo $imagee['alt']; ?>" />
-						<?php endif; ?> 
+						<?php endif; ?>
                         </div>
                     </div><!-- . /END COLUMN-->
 
@@ -199,7 +199,7 @@
                         </h2>
                     </div><!-- . /END HEADER-->
                     <p class="section__description section__description--full-width section__description--white">
-                        <?php the_field('description_footer	'); ?>
+                        <?php the_field('description_footer'); ?>
                     </p>
                     <a href="<?php the_field('url_footer'); ?>" class="button button--plus">
                        <i class="icon-plus"></i>
