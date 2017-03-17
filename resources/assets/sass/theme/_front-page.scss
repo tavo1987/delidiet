@@ -129,7 +129,17 @@
         display: flex;
         align-items: flex-end;
         padding-bottom: 1rem;
-    }
+        color: $white;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $white;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 3.25rem;
+        }
+    }//END PARALLAX
 
     &--hide-small {
         @media screen and (max-width: map-get($breakpoints-sp, 'smartphone') ) {
@@ -154,15 +164,15 @@
     &__image {
         display: inline;
         position: relative;
-        top: calc(20% - 1px);
+        top: calc(50% - 54px);
+        @include media-query('desktop') {
+            bottom: calc(100% - 90px);
+        }
     }
 
     &__content {
         padding-top: 0rem;
         z-index: 50;
         position: relative;
-        @include media-query('desktop') {
-            padding-top: 1rem;
-        }
     }
 }//eEND
