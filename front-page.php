@@ -17,33 +17,39 @@
                     <div class="small-12 medium-6 large-6 columns">
                         <div class="one-section section">
                             <div class="section__header">
-                                <h2 class="section__title section__title--big">DIETA</h2>
-                                <img src="http://delidiet.dev/wp-content/uploads/logo-scarsdale-1.png" alt="Test">
+                                <h2 class="section__title section__title--big"><?php the_field('titulo'); ?></h2>
+                                <?php 
+									$image = get_field('imagen_logo');
+									if( !empty($image) ): ?>
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+									<?php endif; ?>  
                             </div><!-- . /END HEADER-->
                             <p class="section__description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis rem laudantium, debitis eum sapiente mollitia beatae cumque,
-                                quam doloribus, cupiditate ut aliquam at sunt! Similique eius earum magnam iste officiis?
+                                <?php the_field('descripcion'); ?>
                             </p>
-                            <a href="#" class="button button--plus button--plus--gray">
+                            <a href="<?php the_field('url_saber_mas'); ?>" class="button button--plus button--plus--gray">
                                 <i class="icon-plus"></i>
-                                SABER MAS
+                                <?php the_field('texto_boton'); ?>
                             </a>
                         </div><!-- . /END SECTION-->
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 medium-6 large-6 text-center columns section">
-                        <img src="http://delidiet.dev/wp-content/uploads/vegetables.png" alt="Logo">
+						<?php
+							$image = get_field('image');
+							if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 columns section"
                         style="background: url('http://delidiet.dev/wp-content/uploads/background-imc-section.jpg');
-                        background-size: cover;"
-                        >
+                        background-size: cover;">
                         <div class="section__header">
-                            <h2 class="section__title section__title--white">Calcula tu (IMC) <br>  <strong>Índice de <br> Masa Corporal</strong></h2>
+                            <h2 class="section__title section__title--white"> <?php the_field('titulo_2'); ?> </h2>
                         </div><!-- . /END HEADER-->
                         <p class="section__description section__description--white">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br>  Cum sociis natoque penatibus et montes, nascetur ridiculus mus.
+                        <?php the_field('descripcion_2'); ?>
                         </p>
                     </div><!-- . /END COLUMN-->
                 </div><!-- . /END ROW-->
@@ -55,15 +61,17 @@
                 >
                 <div class="section__header">
                     <img src="http://delidiet.dev/wp-content/uploads/almuerzo.png" alt="Logo">
-                    <h2 class="section__title section__title--white  section__title--big" >LIGHT</h2>
+                    <h2 class="section__title section__title--white  section__title--big" >
+                     <?php the_field('titulo3'); ?>
+                     </h2>
                 </div>
 
                 <p class="section__description section__description--white">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
+                    <?php the_field('descripcion_3'); ?>
                 </p>
-                <a class="button button--plus" href="#">
+                <a class="button button--plus" href="<?php the_field('url_tres'); ?>">
                      <i class="icon-plus"></i>
-                    Saber más
+                    <?php the_field('texto_boton_2'); ?>
                 </a>
             </div><!-- . /END COLUMN-->
         </div><!-- . /END ROW-->
@@ -77,21 +85,26 @@
             <div class="small-12 large-8 columns background-section background-section--hide-small" data-background-src="http://delidiet.dev/wp-content/uploads/background-fruits.png">
                 <div class=" section">
                    <div class="section__header">
-                        <img src="http://delidiet.dev/wp-content/uploads/logo-scarsdale-1.png" alt="Test">
-                        <h2 class="section__title section__title--big">DIETA de <br> <strong>14 días</strong></h2>
+                   <?php 
+						$image = get_field('imagen_logo');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>  
+                        <h2 class="section__title section__title--big">
+                        	<?php the_field('titulo_4'); ?>
+                        </h2>
                     </div><!-- . /END HEADER-->
                     <div class="section__subtitle">
                         <h3 class="gray-color">
-                            PROGRAMA PARA <br>
-                            ADELGAZAR DE UNA <br>MANERA SANA Y RÁPIDA
+                            <?php the_field('subtitulo'); ?>
                         </h3>
                     </div><!-- . /END SUBTITLE SECTION4-->
                     <p class="section__description">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
+                        <?php the_field('descripcion_4'); ?>
                     </p>
-                    <a href="#" class="button button--plus button--plus--gray">
+                    <a href="<?php the_field('url_4'); ?>" class="button button--plus button--plus--gray">
                        <i class="icon-plus"></i>
-                       SABER MAS
+                       <?php the_field('texto_boton_4'); ?>
                    </a>
                 </div><!-- . /END SECTION-->
             </div><!-- . /END COLUMN-->
@@ -100,23 +113,24 @@
                 <div class="row">
                     <div class="small-12 columns section section--padding-left">
                         <h2 class="section__title section__title--gray section__title--padding-top-large">
-                            <strong class="section__title--small">SIN</strong>
-                            <br/>PASTILLAS
+                            <strong class="section__title--small"><?php the_field('titulo_4_columna_derecha_small'); ?></strong>
+                            <br/><?php the_field('titulo_4_columna_derecha_big'); ?>
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
+                            <?php the_field('descripcion_4_derecha'); ?>
                         </p>
                     </div>
                     <div class="small-12 columns section section--padding-left section--padding-top-none">
                         <div class="section__header">
                             <h2 class="section__title section__title--gray">
-                                <strong class="section__title--small">SERVICIO A</strong>
-                                <br>DOMICILIO
+                                <strong class="section__title--small">
+                                <?php the_field('titulo_4_columna_derecha_2_small'); ?></strong>
+                                <br><?php the_field('titulo_4_columna_derecha_2_big'); ?>
                             </h2>
                         </div>
 
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt voluptatem soluta obcaecati ex hic, maxime quod voluptates similique iusto nulla. Nesciunt porro maxime nulla dolores, ducimus tenetur, ex molestias.
+                            <?php the_field('descripcion_4_derecha_3'); ?>
                         </p>
                     </div><!-- . /END COLUMN-->
                 </div><!-- . /END ROW-->
@@ -142,20 +156,23 @@
                     <div class="small-12 medium-6 large-12 columns">
                         <div class="section__header">
                             <h2 class="section__title  section__title--green section__title--padding-botom, section__title--padding-top" >
-                                ¿Cómo <br>
-                                <strong>funciona?</strong>
+                                <?php the_field('como_funciona'); ?>
                             </h2>
-                            <img src="http://delidiet.dev/wp-content/uploads/black-scarsdale-logo.png" alt="Logo">
+                            <?php 
+						$imagee = get_field('imagen_logo_');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $imagee['url']; ?>" alt="<?php echo $imagee['alt']; ?>" />
+						<?php endif; ?> 
                         </div>
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 medium-6 large-12 columns  padding-top--medium">
                         <p class="section__description section__description--padding-bottom-none">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
+                            <?php the_field('descripcion_video'); ?>
                         </p>
-                        <a class="button button--plus button--plus--gray" href="#">
+                        <a class="button button--plus button--plus--gray" href="<?php the_field('url_video'); ?>">
                              <i class="icon-plus"></i>
-                            Saber más
+                            <?php the_field('texto_boton_video'); ?>
                         </a>
                     </div><!-- . /END COLUMN-->
                 </div><!--./ END ROW-->
@@ -163,7 +180,7 @@
 
             <div class="small-12 medium-12 large-8 columns">
                 <div class="responsive-embed widescreen">
-                    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LlzFfE2gvcw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="640" height="360" src="<?php the_field('src_iframe'); ?>" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div><!-- . /END COLUMN-->
         </div><!-- . /END ROW-->
@@ -177,14 +194,16 @@
             <div class="small-12 medium-8 large-7 columns background-section">
                 <div class=" section">
                    <div class="section__header">
-                        <h2 class="section__title section__title--white">¡TE <br> <strong>VISITAMOS!</strong></h2>
+                        <h2 class="section__title section__title--white">
+                        <?php the_field('title_footer'); ?>
+                        </h2>
                     </div><!-- . /END HEADER-->
                     <p class="section__description section__description--full-width section__description--white">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.
+                        <?php the_field('description_footer	'); ?>
                     </p>
-                    <a href="#" class="button button--plus">
+                    <a href="<?php the_field('url_footer'); ?>" class="button button--plus">
                        <i class="icon-plus"></i>
-                       SABER MAS
+                       <?php the_field('texto_boton_footer'); ?>
                    </a>
                 </div><!-- . /END SECTION-->
             </div><!-- . /END COLUMN-->
