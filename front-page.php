@@ -43,7 +43,7 @@
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 columns section"
-                        style="background: url(<?php echo get_site_url();?>'/wp-content/uploads/background-imc-section.jpg');
+                        style="background: url(<?php echo get_site_url();?>/wp-content/uploads/background-imc-section.jpg);
                         background-size: cover;">
                         <div class="section__header">
                             <h2 class="section__title section__title--white"> <?php the_field('titulo_2'); ?> </h2>
@@ -56,7 +56,7 @@
             </div><!-- . /END COLUMNS-->
 
             <div class="small-12 large-4 columns section section--align-bottom section--padding-left"
-                style="background: url(<?php echo get_site_url();?>'/wp-content/uploads/background-almuerzo-light.jpg');
+                style="background: url(<?php echo get_site_url();?>/wp-content/uploads/background-almuerzo-light.jpg);
                 background-size: cover;"
                 >
                 <div class="section__header">
