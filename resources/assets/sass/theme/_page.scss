@@ -30,7 +30,7 @@
         width: 100%;
         @include media-query('desktop') {
             text-align: right;
-            bottom: 0;
+            bottom: 15px;
             right: 1rem;
             font-size: 10rem;
         }
@@ -41,6 +41,10 @@
     }
 
     &__content {
+        .row {
+            max-width: 64rem;
+        }
+
         padding-top: 2rem;
         max-width: $max-width;
         padding-right: 0.9375rem;
