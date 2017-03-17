@@ -43,7 +43,7 @@
                     </div><!-- . /END COLUMN-->
 
                     <div class="small-12 columns section"
-                        style="background: url(<?php  ?>'/wp-content/uploads/background-imc-section.jpg');
+                        style="background: url(<?php echo get_site_url();?>'/wp-content/uploads/background-imc-section.jpg');
                         background-size: cover;">
                         <div class="section__header">
                             <h2 class="section__title section__title--white"> <?php the_field('titulo_2'); ?> </h2>
