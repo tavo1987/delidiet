@@ -67,4 +67,12 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //REMOVE PARAGRAPH FROM SHORTCODES
+    $( ".js-remove-paragraph" ).each(function() {
+        var paragraph = $(this).find('p');
+        var content = paragraph.contents();
+        paragraph.remove();
+        $(this).append(content);
+    });
+
 });
