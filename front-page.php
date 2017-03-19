@@ -180,7 +180,7 @@
 
             <div class="small-12 medium-12 large-8 columns">
                 <div class="responsive-embed widescreen">
-                    <iframe width="640" height="360" src="<?php the_field('src_iframe'); ?>" frameborder="0" allowfullscreen></iframe>
+                    <div class="youtube-player" data-id="LlzFfE2gvcw"></div>
                 </div>
             </div><!-- . /END COLUMN-->
         </div><!-- . /END ROW-->
