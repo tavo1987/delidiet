@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
         if (window.matchMedia('(min-width: 64em)').matches) {
             $("nav > ul, nav > ul  li  ul").removeAttr("style");
             offMainMenu();
-            console.log('desktop');
+
         }else {
             buttonSubmenu.on('click', function(event) {
                 //event.preventDefault();
@@ -41,7 +41,6 @@ jQuery(document).ready(function ($) {
                 $(this).next(submenu).stop().slideToggle();
                 event.stopPropagation();
             });//END BUTTONS SUBMENU
-            console.log('mobile')
         }
     });
 
