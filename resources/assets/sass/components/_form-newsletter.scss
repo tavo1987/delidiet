@@ -9,8 +9,8 @@
     max-width: 280px;
     margin:0 auto 1rem auto;
     position: relative;
-    margin-right: 0;
     @include media-query('tablet') {
+        margin-right: 0;
     }
     .ajax-loader{
         right: 50px;
