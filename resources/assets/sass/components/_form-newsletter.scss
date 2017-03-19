@@ -27,6 +27,14 @@
 
     input[type=submit] {
         padding: 0 .85rem;
+        background: url('../images/arrow-right-icon.png') no-repeat, $font-color;
+        width: 45px;
+        display: block;
+        background-position: center;
+        /* Hide the text. */
+        text-indent: 200%;
+        white-space: nowrap;
+        tex-overflow: hidden;
     }
 
     &__button {
@@ -40,5 +48,4 @@
         border-right: none;
         margin-bottom: 0;
     }
-
 }
