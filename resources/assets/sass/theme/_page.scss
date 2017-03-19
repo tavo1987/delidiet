@@ -106,10 +106,21 @@
         ul {
             text-indent: 2px;
             list-style-position: outside;
+            li {
+                padding-left: .75rem;
+                position: relative;
+                line-height: 1.4;
+                margin-bottom: .5rem;
+            }
+
             li:before {
-                content: '✔';
-                font-weight: bold;
-                margin-right: .75rem;
+                font-family: delidiet;
+                font-size: 1.15rem;
+                position: relative;
+                top: -3px;
+                content: "\66";
+                position: absolute;
+                right: 100%;
             }
         }
 
