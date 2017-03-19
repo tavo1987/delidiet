@@ -20,12 +20,12 @@
 
     <header class="header" role="banner">
         <section class="branding">
-            <div class="logo" role="logo">
-                <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?>
+            <div class="logo">
+                <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1><span class="hide-text">'.get_bloginfo('name').'</span>'; } ?>
                     <?php if (function_exists('get_custom_logo')): ?>
                         <?php echo get_custom_logo(); ?>
                     <?php else: ?>
-                        <a href="<?php site_url(); ?>"><?php bloginfo('home'); ?></a>
+                        <a href="<?php site_url(); ?>"><?php bloginfo('name'); ?></a>
                     <?php endif; ?>
                 <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
             </div>
