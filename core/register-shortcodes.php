@@ -126,6 +126,14 @@ add_shortcode('sp_plus_button', 'plusButton');
     require_once 'shortcodes/ParallaxSection.php';
     $parallaxSection = new ParallaxSection();
 
+/*
+    ==================================================================
+        SP WHATS APP WIDGET
+    ==================================================================
+*/
+    require_once 'shortcodes/WhatsAppWidget.php';
+    $whatsappWidget = new WhatsAppWidget();
+
 
 /**
  * Formating all shortcodes scapping auto <p></p>
