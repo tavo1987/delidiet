@@ -43,6 +43,18 @@
             margin: 0;
         }//END MENU ITEMS
 
+        .current-menu-item a,
+        .page_item a{
+            border-left: 3px solid $base-color;
+            @include media-query('desktop') {
+                border-left: none;
+                 &:after {
+                    width: 100%;
+                 }
+            }
+        }//END CURRENT ITEM
+
+
         a{
             @include fontSize(16);
             border-bottom: 1px solid rgba($white, .2);
