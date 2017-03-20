@@ -22,7 +22,7 @@ class WhatsAppWidget
 
         extract($attributes);
 
-        $output = '<div class="js-remove-paragraph whatsapp-widget">';
+        $output = '<div class="js-remove-paragraph whatsapp-widget '.$class.'">';
             $output .= '<a href="'.$href.'">';
                 $output .= '<i class="icon-whatsapp"></i>';
                 $output .= '<span class="whatsapp-widget__item whatsapp-widget__title">'.$title.'</span>';
