@@ -56,6 +56,10 @@ function shiftpress_setup(){
         'admin-preview-callback' => '',
     );
     add_theme_support('custom-header', $defaults);
+
+    // Enable shortcodes in text widgets
+    add_filter('widget_text','do_shortcode');
+
 }
 add_action('after_setup_theme', 'shiftpress_setup');
 
