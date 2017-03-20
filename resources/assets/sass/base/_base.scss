@@ -69,12 +69,6 @@ ul{
     list-style: none;
 }
 
-/*para verificar el item seleccionado del menu*/
-li.current-menu-item,.page_item{
-    color: $base-color !important;
-
-}
-
 .bg-basecolor{
     background-color:$base-color;
 }
@@ -188,4 +182,26 @@ li.current-menu-item,.page_item{
     overflow: hidden;
     display: inline-block;
     position: absolute;
+}
+
+.google-map {
+    position: relative;
+    padding-bottom: 70%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    @include media-query('tablet') {
+        padding-bottom: 50%; // This is the aspect ratio
+    }
+
+    @include media-query('desktop') {
+        padding-bottom: 30%; // This is the aspect ratio
+    }
+}
+
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
 }
