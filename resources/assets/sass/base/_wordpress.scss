@@ -112,3 +112,11 @@ img.img-small {
 img.img-medium {
   padding: .75rem;
 } */
+
+@media screen and (max-width: 782px) {
+    #wpadminbar {
+        height: 46px;
+        min-width: 300px;
+        position: fixed;
+    }
+}
