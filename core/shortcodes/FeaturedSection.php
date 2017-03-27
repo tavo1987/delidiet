@@ -30,7 +30,7 @@ class FeaturedSection
             $output .= '</div>';
 
             $output .= '<div class="row featured-section__content">';
-                $output .= '<div class="small-12 medium-12 large-12 columns section section--padding-top-none small-text-center">';
+                $output .= '<div class="small-12 medium-12 large-12 columns small-text-center">';
                     $output .= do_shortcode($content);
                 $output .= '</div>';
             $output .= '</div>';
