@@ -41,16 +41,17 @@
     }
 
     &__content {
-        .row {
-            max-width: 64rem;
-        }
-
         padding-top: 2rem;
         max-width: $max-width;
         padding-right: 0.9375rem;
         padding-left: 0.9375rem;
         margin: auto;
         text-align: left;
+
+        .row {
+            max-width: $max-width;
+        }
+
         &--full-width {
             max-width: initial;
             padding-right: 0;
