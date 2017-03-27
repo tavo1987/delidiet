@@ -160,18 +160,31 @@
 .featured-section {
     position: relative;
     &__header {
-        background: $white;
+        background: $bg-color;
         z-index: 100;
+        @include media-query('smartphone') {
+            background: $white;
+        }
     }
 
     &__image {
         position: relative;
-        top: 31%;
+        top: 40px;
+        @include media-query('smartphone') {
+            top: 90px;
+        }
     }
 
     &__content {
         padding-top: 0rem;
         z-index: 50;
         position: relative;
+        @include media-query('smartphone') {
+            padding-top: 1.75rem;
+        }
+
+        &--padding-top-none{
+            padding-top: 0;
+        }
     }
 }//eEND
