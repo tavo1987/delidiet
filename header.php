@@ -41,13 +41,8 @@
             ])?>
         </nav><!--END NAV-->
 
-        <div class="social-networks">
-            <ul class="social-networks__list">
-                <li class="social-networks__item"><a href="#"><i class="icon-facebook"></i></a></li>
-                <li class="social-networks__item"><a href="#"><i class="icon-instagram"></i></a></li>
-                <li class="social-networks__item"><a href="#"><i class="icon-youtube"></i></a></li>
-            </ul>
-        </div><!-- ./END SOCIAL NETWORKS-->
+        <?php get_sidebar('header'); ?>
+
     </header><!-- ./END HEADER-->
 
     <div class="container">
