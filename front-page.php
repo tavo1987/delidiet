@@ -28,7 +28,7 @@
                                 <?php the_field('descripcion'); ?>
                             </p>
                             <a href="<?php the_field('url_saber_mas'); ?>" class="button button--plus button--plus--gray">
-                                <i class="icon-plus"></i>
+
                                 <?php the_field('texto_boton'); ?>
                             </a>
                         </div><!-- . /END SECTION-->
@@ -70,7 +70,6 @@
                     <?php the_field('descripcion_3'); ?>
                 </p>
                 <a class="button button--plus" href="<?php the_field('url_tres'); ?>">
-                     <i class="icon-plus"></i>
                     <?php the_field('texto_boton_2'); ?>
                 </a>
             </div><!-- . /END COLUMN-->
@@ -103,7 +102,6 @@
                         <?php the_field('descripcion_4'); ?>
                     </p>
                     <a href="<?php the_field('url_4'); ?>" class="button button--plus button--plus--gray">
-                       <i class="icon-plus"></i>
                        <?php the_field('texto_boton_4'); ?>
                    </a>
                 </div><!-- . /END SECTION-->
@@ -150,28 +148,24 @@
             </div><!--./ FEAURED ROW-->
         </div><!--./ FEAURED IMAGE HEADER-->
 
-        <div class="row featured-section__content">
-            <div class="small-12 medium-12 large-4 columns section section--padding-top-none small-text-center">
+        <div class="row featured-section__content featured-section__content--padding-top-none">
+            <div class="small-12 medium-12 large-4 columns small-text-center">
                 <div class="row aling-center">
                     <div class="small-12 medium-6 large-12 columns">
-                        <div class="section__header">
-                            <h2 class="section__title  section__title--green section__title--padding-botom, section__title--padding-top" >
-                                <?php the_field('como_funciona'); ?>
-                            </h2>
-                            <?php
-						$imagee = get_field('imagen_logo_');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $imagee['url']; ?>" alt="<?php echo $imagee['alt']; ?>" />
-						<?php endif; ?>
-                        </div>
+                        <h2 class="section__title  section__title--green section__title--padding-botom section__title--padding-top" >
+                            <?php the_field('como_funciona'); ?>
+                        </h2>
+                        <?php $imagee = get_field('imagen_logo_');
+					          if( !empty($image) ): ?>
+						     <img src="<?php echo $imagee['url']; ?>" alt="<?php echo $imagee['alt']; ?>" />
+					    <?php endif; ?>
                     </div><!-- . /END COLUMN-->
 
-                    <div class="small-12 medium-6 large-12 columns  padding-top--medium">
-                        <p class="section__description section__description--padding-bottom-none">
+                    <div class="small-12 medium-6 large-12 columns  padding-top">
+                        <p>
                             <?php the_field('descripcion_video'); ?>
                         </p>
                         <a class="button button--plus button--plus--gray" href="<?php the_field('url_video'); ?>">
-                             <i class="icon-plus"></i>
                             <?php the_field('texto_boton_video'); ?>
                         </a>
                     </div><!-- . /END COLUMN-->
@@ -202,7 +196,6 @@
                         <?php the_field('description_footer'); ?>
                     </p>
                     <a href="<?php the_field('url_footer'); ?>" class="button button--plus">
-                       <i class="icon-plus"></i>
                        <?php the_field('texto_boton_footer'); ?>
                    </a>
                 </div><!-- . /END SECTION-->
