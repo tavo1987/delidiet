@@ -75,7 +75,6 @@ function plusButton($atts, $content=null)
     extract($attributes);
 
     $output  = '<a href="'.$href.'" target="'.$target.'" class="button button--plus '.$class.'">';
-    $output .= '<i class="icon-plus"></i>';
     $output .= $text;
     $output .= '</a>';
     return $output;
