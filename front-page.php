@@ -49,8 +49,11 @@
                             <h2 class="section__title section__title--white"> <?php the_field('titulo_2'); ?> </h2>
                         </div><!-- . /END HEADER-->
                         <p class="section__description section__description--white">
-                        <?php the_field('descripcion_2'); ?>
+                            <?php the_field('descripcion_2'); ?>
                         </p>
+                        <a class="button button--plus" href="<?php site_url(); ?>/calculdora-imc">
+                            SABER MÁS
+                        </a>
                     </div><!-- . /END COLUMN-->
                 </div><!-- . /END ROW-->
             </div><!-- . /END COLUMNS-->
@@ -130,6 +133,7 @@
                         <p>
                             <?php the_field('descripcion_4_derecha_3'); ?>
                         </p>
+
                     </div><!-- . /END COLUMN-->
                 </div><!-- . /END ROW-->
             </div><!-- . /END COLUMN-->
