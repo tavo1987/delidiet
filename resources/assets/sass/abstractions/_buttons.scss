@@ -1,10 +1,8 @@
-
-
-
-
-/*---------------------------------------------------------------
-	$botones
------------------------------------------------------------------*/
+/*
+    =============================================================
+        BUTTONS
+    =============================================================
+*/
 
 .button{
 	@extend  %button;
@@ -22,6 +20,7 @@
             color: $base-color;
             text-decoration: none;
             background: initial;
+            animation: jello 1s;
         }
 
         &:focus {
@@ -29,29 +28,21 @@
             background: initial;
         }
 
-        .icon-plus {
-            position: relative;
-        }
-
-        .icon-plus:before {
-            transition: all .5s;
-            display: block;
-            margin-right: .75rem;
-            content: '+';
-            line-height: 28px;
-            min-height: auto;
-            width: 45px;
-            height: 45px;
-            font-size: 3rem;
+        &:before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: rgba($black, .4);
-            position: relative;
             border-radius: 50%;
-            text-align: center;
+            color: $white;
+            content: "+";
+            font-size: 3.25rem;
+            line-height: 43px;
+            width: 45px;
+            margin-right: .75rem;
+            font-weight: 300;
+            transition: all .3s;
             border: 1px solid rgba($white, .3)
-        }
-
-        &:hover .icon-plus:before{
-            transform: rotate(180deg);
         }
 
         &--gray {
@@ -63,7 +54,7 @@
             &:focus {
                 color: $base-color;
             }
-        }//PLUS BUTTON
+        }//PLUS GRAY BUTTON
     }//PLUS BUTTON
 }//END BUTTON
 
