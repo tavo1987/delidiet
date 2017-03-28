@@ -4,7 +4,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link href="https://file.myfontastic.com/yGo3rfJJEWvonJC4e6aXtP/icons.css" rel="stylesheet">
 
     <?php if (get_option('facebook_pixel_code') != ''): ?>
         <?php get_template_part( 'partials/code', 'facebook' ); ?>
