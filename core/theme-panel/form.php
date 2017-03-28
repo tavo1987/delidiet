@@ -1,6 +1,6 @@
 
 <div class="wrap">
-    <h1> <?php _e('Shiftpress Settings','shiftpress') ?></h1>
+    <h1> <?php _e('Delidiet Settings','shiftpress') ?></h1>
     <?php settings_errors(); ?>
     <form action="options.php" method="post">
         <?php

@@ -1,8 +1,8 @@
 <?php
 
 function shiftpress_admin_page(){
-    add_menu_page( __('Shiftpress', 'shiftpress'),'Shiftpress', 'manage_options', 'shiftpress_theme_panel', 'shiftpress_create_page', 'dashicons-admin-generic',110 );
-    add_submenu_page( 'shiftpress_theme_panel', __('Shiftpress','shiftpress'), 'General', 'manage_options', 'shiftpress_theme_panel', 'shiftpress_create_page' );
+    add_menu_page( __('Delidiet', 'shiftpress'),'Delidiet', 'manage_options', 'shiftpress_theme_panel', 'shiftpress_create_page', 'dashicons-admin-generic',110 );
+    add_submenu_page( 'shiftpress_theme_panel', __('Delidiet','shiftpress'), 'General', 'manage_options', 'shiftpress_theme_panel', 'shiftpress_create_page' );
     add_action("admin_init", "display_theme_panel_options");
 }
 
