@@ -139,7 +139,7 @@ add_shortcode('sp_plus_button', 'plusButton');
  */
 
 add_filter('the_content', 'shortcode_unautop', 100);
-remove_filter('acf_the_content', 'wpautop');
+//remove_filter('acf_the_content', 'wpautop');
 //decide when you want to apply the auto paragraph
 add_filter('the_content', 'remove_autoparagraph');
 function remove_autoparagraph($content)
