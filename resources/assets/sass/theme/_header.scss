@@ -1,4 +1,14 @@
 
+.headroom {
+    transition: transform .3s;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
 .header{
     position: fixed;
     width: 100%;

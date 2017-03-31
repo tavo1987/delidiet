@@ -17,7 +17,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header class="header" role="banner">
+    <header class="header" role="banner"  id="sp-header">
         <section class="branding">
             <div class="logo">
                 <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1><span class="hide-text">'.get_bloginfo('name').'</span>'; } ?>

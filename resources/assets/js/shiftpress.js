@@ -74,4 +74,16 @@ jQuery(document).ready(function ($) {
         $(this).append(content);
     });
 
+    //HEADROOM HEADER
+    var header   = document.getElementById("sp-header");
+    var headroom = new Headroom(header, {
+        offset : 150,
+        onUnpin : function() {
+            resetMenu();
+        },
+    });
+
+    // initialise
+    headroom.init();
+
 });
