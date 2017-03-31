@@ -7,7 +7,7 @@
 .sp-page{
 
     &__header {
-        min-height: 250px;
+        min-height: 275px;
         background-size: cover !important;
         background-position: center !important;
         background: #000;
@@ -26,6 +26,7 @@
         color: $white;
         font-family: $secondary-font-family;
         font-size: 6rem;
+        letter-spacing: 5px;
         text-align: center;
         width: 100%;
         @include media-query('desktop') {
@@ -75,7 +76,7 @@
         }
 
         h3 {
-            font-size: 2.25rem;
+            font-size: 2rem;
             font-weight: 300;
             color: $black;
         }
