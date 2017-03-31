@@ -1,5 +1,5 @@
-# ShiftPress
-Tema base para Wordpress
+# DELI-DIET THEME
+Tema desarrolado a medida para Delidiet
 
 ## Tecnologías
 * Html5
@@ -8,7 +8,6 @@ Tema base para Wordpress
 * Postcss
 * Php
 * Gulp
-* Elixir
 * Browser Sync
 * Sass
 * Responsive Design
@@ -19,41 +18,39 @@ Plugins comunmente utilizados son:
 * [Contact Form 7 *](http://contactform7.com/docs/)
 * [Wordpress SEO by Yoast *](https://yoast.com/wordpress/plugins/seo/api/)
 * [sendgrid *](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)
-* [Mailchimp for WordPress](https://mc4wp.com/kb/)
 * [Advanced Custom Fiels](http://www.advancedcustomfields.com/resources/)
 
 ## Instalación
-Para instalar todas las dependencias para constuir el tema basado en foundation ejecutar:
+Para instalar todas las dependencias ejecutar:
 
-    npm install
+    yarn ó npm install
 
-Esto nos baja foundation y las dependencias gulp que utilizamos en este tema.
+Esto nos baja foundation y las dependencias gulp que utilizamos en este tema y creará la carpeta `node_modules`.
 
 ## Configuración del proyecto
 El tema maneja varias maneras de administrar los assets
 
-* Elixir
-* Solo Gulp
-* Prepros (solo sass)
+* [Gulp](http://gulpjs.com/)
+* [Prepros](https://prepros.io/)
 
-Es totalmente flexible para trabajar con foundation o boostrap solo cambiar la importación en:
+La ruta donde estan los archivosc scss,js, y mjml es:
 
-   resources/assets/sass/shiftpress.scss
+   resources/assets/
 
-De momento está configurado para usar foundation, después de haber instalado las dependencias con npm install ejecutamos el siguiente comando para generar el archivo de gulp según necesidades ya sea en elixir o simplemente gulp:
+De momento está configurado para usar foundation, después de haber instalado las dependencias con `npm install` ejecutamos el siguiente comando para compilar los assets:
 
-   npm run start
+   `gulp`
 
-**Antes de continuar debes entrar al archivo gulpfile.js generado a cambiar la url de tu sitio en desarrollo.** Una vez generado el archivo procedemos a ejecutar el siguiente comando para correr gulp ya sea con elixir o sin el:
+> Antes de continuar debes entrar al archivo `gulpfile.js` y cambiar la url de tu sitio en desarrollo para que browser sync trabaje correctamente
 
-   npm run dev
+comando para trabajar en desarrollo
 
-para el desarrollo o:
+   `npm run dev`
 
-   npm run production
+para producción:
 
-para producción
+   `npm run production`
 
-####- - COPYRIGHT & LICENSE - -
+#### COPYRIGHT & LICENSE
 
 This theme is based on BlankSlate theme
