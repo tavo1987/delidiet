@@ -1,0 +1,65 @@
+/*
+    ==============================================================================
+        ICON MENU
+    ==============================================================================
+*/
+
+.icon-menu{
+    width:40px;
+    height:$width-icon-menu;
+    position:absolute;
+    right: 1rem;
+    top: 1.25rem;
+    display: block;
+    cursor:pointer;
+    z-index: 100;
+    @include media-query('desktop') {
+        display: none;
+    }
+
+    &:after,
+    &:before {
+        left: 0;
+        right: 0;
+        margin:auto;
+        position:absolute;
+        width:$width-icon-menu;
+        content:'';
+        display:block;
+        transition:all .3s ease;
+    }
+
+    &:before{
+        top:5px;
+        height:4px;
+        background:#ddd;
+    }//END BEFORE
+
+    &:after{
+        top:13px;
+        height:12px;
+        border-top:4px solid #dddddd;
+        border-bottom:4px solid #dddddd;
+    }//END AFTER
+
+
+    &.menu-opened {
+        &:after,
+        &:before {
+            transition:all .3s ease;
+            width:$width-icon-menu;
+            top: .85rem;
+            background:$base-color;
+            height:4px;
+            border:0;
+        }
+
+        &:after{
+            transform:rotate(45deg);
+        }//END AFTER
+
+        &:before{
+            transform:rotate(-45deg)
+        }//END BEFORE
+    }//END  MENU OPENED
+}//END ICON MENU

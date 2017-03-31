@@ -1,0 +1,63 @@
+/*
+    ====================================================================
+        $FOOTER SIDE BAR
+    ====================================================================
+*/
+
+
+.sp-page .form-faq {
+    padding: 0;
+    background: initial;
+    &__title {
+        width: 100%;
+        display: block;
+        margin-bottom: .75rem;
+        text-align: right;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $font-color;
+        font-size: 1.35rem;
+    }
+
+    .question {
+        width: 100%;
+    }
+}//END FORM FAQ
+
+.form-faq__group{
+    display: flex;
+    margin:0 auto 1rem auto;
+    position: relative;
+    align-items: flex-start;
+
+    @include media-query('tablet') {
+        margin-right: 0;
+    }
+    .ajax-loader{
+        position: absolute;
+        left: 10px;
+        @include verticalAlign();
+    }
+
+    input[type=text] {
+       height: 2.25rem;
+       border: 1px solid $font-color;
+       width: 100%;
+       border-right:none;
+       display: block;
+       margin-bottom: 0;
+    }
+
+    input[type=submit] {
+        padding: 0 .85rem 0 2rem;
+        display: block;
+        background: url('../images/arrow-right-icon.png') no-repeat, $font-color;
+        background-position: 1rem center;
+        background-size: 8px;
+        height:2.25rem;
+    }
+
+    &__button {
+       padding-left: .75rem;
+    }
+}//END TITLE

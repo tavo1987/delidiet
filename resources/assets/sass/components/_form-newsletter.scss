@@ -1,0 +1,52 @@
+/*
+    ====================================================================
+        $FOOTER SIDE BAR
+    ====================================================================
+*/
+
+.form-newsletter{
+    display: flex;
+    max-width: 280px;
+    margin:0 auto 1rem auto;
+    position: relative;
+    @include media-query('tablet') {
+        margin-right: 0;
+    }
+    .ajax-loader{
+        right: 50px;
+        position: absolute;
+        top: 15px;
+    }
+
+    input[type=submit],
+    input[type=email],
+    input[type=text] {
+       height: 2.75rem;
+       border-right:none;
+    }
+
+    input[type=submit] {
+        padding: 0 .85rem;
+        background: url('../images/arrow-right-icon.png') no-repeat, $font-color;
+        width: 45px;
+        display: block;
+        background-position: center;
+        background-size: 10px;
+        /* Hide the text. */
+        text-indent: 250%;
+        white-space: nowrap;
+        tex-overflow: hidden;
+    }
+
+    &__button {
+       padding-left: .75rem;
+    }
+}//END TITLE
+
+
+.footer .form-newsletter{
+    input[type=email]{
+        border-right: none;
+        margin-bottom: 0;
+    }
+}

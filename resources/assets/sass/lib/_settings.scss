@@ -14,12 +14,13 @@ $breakpoints-sp :(
 )!default;
 
 // $variables generales de colores
-$base-color:   #1468a4;
-$secondary-color: #333333;
+$base-color:   #BBB833;
+$secondary-color: #019147;
 
 //backgrouund colors
-$bg-color: darken(#F1F1F1,1%);
+$bg-color: #F2F2F2;
 
+$width-icon-menu : 30px;
 
 // $colores
 $white:     #fff;
@@ -29,17 +30,25 @@ $dark-light: #333;
 $gray:      #ccc;
 $dark-gray:  darken($gray,25%);
 
+//MAIN MENU COLORS
+$submenu-link-color: rgba($white, .7);
+$submenu-border-color: rgba($white, .2);
+
+//Gutter
+$total-gutter : 1.855rem;
+
 
 //colores fuentes
-$font-color:      #000;
-$title-color:     #6e6e6e;
-$link-color:      skyblue;
-$link-color-hover: #1AB0FF;
+$font-color:      #999999;
+$title-color:     #BBB833;
+$link-color:      #BBB833;
+$link-color-hover: darken($link-color, 10);
 
 
 // $Fuente
 $font-size:     16;
-$font-family:   'Open Sans', sans-serif !important;
+$font-family:   'Roboto', sans-serif;
+$secondary-font-family: 'Stink on the Death', 'Roboto', Arial;
 
 
 // $max-width

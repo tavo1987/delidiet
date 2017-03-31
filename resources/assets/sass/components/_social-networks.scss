@@ -1,0 +1,57 @@
+/*
+    ====================================================================
+        $SOCIAL NETWORKS
+    ====================================================================
+*/
+
+.social-networks {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    a {
+        color: $font-color;
+        display: block;
+        text-decoration: none;
+        padding: 0 .75rem;
+        &:hover {
+            color: $base-color;
+        }
+    }
+
+    li:last-child a{
+        padding-right: 0;
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-size: 1.75rem ;
+        padding: 0;
+    }
+
+    .social-networks__list i:before {
+        padding: 0;
+    }
+
+    .icon-youtube {
+        position: relative;
+        top: -2px;
+    }
+
+    &--footer {
+        margin-bottom: 2rem;
+        .social-networks__list {
+            justify-content: center;
+            @include media-query('tablet') {
+                justify-content: flex-end;
+            }
+        }
+
+        @include media-query('tablet') {
+            margin-bottom: 0;
+            margin-top: 3.8rem;
+        }
+    }//END FOOTER
+}//END SOCILA NETWORKS

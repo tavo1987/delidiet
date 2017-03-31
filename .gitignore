@@ -7,4 +7,3 @@ sitemap.xml.gz
 *.sass-cache/*
 node_modules/
 bower_components/
-gulpfile.js

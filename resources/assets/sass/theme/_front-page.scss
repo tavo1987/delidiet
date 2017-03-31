@@ -1,0 +1,226 @@
+/*
+    ====================================================================
+        $FRONT PAGE
+    ====================================================================
+*/
+
+
+.front-page {
+    text-align: justify;
+}//END FRONT PAGE
+
+.section {
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+
+    @include media-query('desktop') {
+        padding-top: 4.5rem;
+    }
+
+    img{
+        margin-bottom: .5rem;
+    }
+
+    &__header {
+        margin-bottom: 1.15rem;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+        font-weight: 300;
+        line-height: 1.1;
+        @include media-query('desktop') {
+            font-size: 3.5rem;
+        }
+
+        &--white {
+            color: $white;
+        }
+
+        &--green {
+            color: $base-color;
+        }
+
+        &--big {
+            font-size: 2.75rem;
+            @include media-query('desktop') {
+                font-size: 4rem;
+            }
+        }
+
+        &--gray{
+            color: $font-color;
+        }
+
+        &--small {
+            font-size: 1.45rem;
+        }
+
+         &--padding-top{
+            padding-top: 2rem;
+        }
+
+        &--padding-top-large{
+            @include media-query('desktop') {
+                padding-top: 1.75rem;
+            }
+        }
+    }//END TITLE
+
+    &__subtitle {
+        font-family: $secondary-font-family;
+        font-size: 5rem;
+        line-height: 0.4;
+        margin-bottom: 1.75rem;
+        letter-spacing: 3px;
+        &--white {
+            color: $white;
+        }
+
+        &--before {
+            margin-bottom: .75rem;
+        }
+    }
+
+    &__description{
+        font-size: 1rem;
+        max-width: 450px;
+        margin-bottom: 2rem;
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        &--white {
+            color: $white;
+        }
+
+        &--full-width {
+            max-width: initial;
+        }
+
+        &--padding-bottom-none {
+            margin-bottom: .75rem;
+        }
+
+    }
+
+    &--align-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        min-height: 750px;
+        @include media-query('desktop') {
+            min-height: auto;
+        }
+    }
+
+    &--padding-left {
+        @include media-query('desktop') {
+            padding-left: 2.5rem;
+        }
+    }
+
+    &--padding-bottom-none{
+        padding-bottom: 0;
+    }
+
+    &--padding-top-none{
+        padding-top: 0;
+    }
+
+    &--padding-top {
+        padding-top: 2rem;
+    }
+
+}//END SECTIOON
+
+.section-two {
+    @include media-query('desktop') {
+        p{
+            max-width: 325px;
+            font-weight: normal;
+        }
+    }//END MEDIA QUERY
+}//END SECTION
+
+.background-section {
+
+    &.parallax{
+        background-attachment: fixed !important;
+        background-position: center top !important;
+        background-size: cover !important;
+        min-height: 500px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        color: $white;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $white;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            @include media-query('desktop') {
+                font-size: 3.25rem;
+            }
+        }
+    }//END PARALLAX
+
+    &--hide-small {
+        @media screen and (max-width: map-get($breakpoints-sp, 'smartphone') ) {
+            background: initial !important;
+        }//END MEDIA QUERY
+    }
+
+    &--hide-medium {
+        @media screen and (max-width: map-get($breakpoints-sp, 'tablet') ) {
+            background: initial !important;
+        }//END MEDIA QUERY
+    }
+}//END BACKGROUND
+
+.featured-section {
+    position: relative;
+
+    h2 {
+        line-height: 1;
+        font-size: 2.75rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    &__header {
+        background: $bg-color;
+        z-index: 100;
+        @include media-query('smartphone') {
+            background: $white;
+        }
+    }
+
+    &__image {
+        position: relative;
+        top: 40px;
+        @include media-query('smartphone') {
+            top: 90px;
+        }
+    }
+
+    &__content {
+        padding-top: 0rem;
+        z-index: 50;
+        position: relative;
+        @include media-query('smartphone') {
+            padding-top: 0;
+        }
+
+        &--padding-top-none{
+            padding-top: 0;
+        }
+    }
+}//eEND

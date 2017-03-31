@@ -38,4 +38,4 @@ require_once(get_template_directory().'/core/register-widgets.php');
 /**
  * Register shortcodes
  */
-//require_once(get_template_directory().'/functions/register-shortcodes.php');
+require_once(get_template_directory().'/core/register-shortcodes.php');

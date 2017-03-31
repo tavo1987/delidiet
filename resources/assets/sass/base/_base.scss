@@ -1,94 +1,213 @@
 /*
-	=============================================
-		$GENERALS STYLES
-	=============================================
+    =============================================
+        $GENERALS STYLES
+    =============================================
 */
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
 
 html{
-	font-size: 16px;
-	box-sizing: border-box;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body{
-	font-family: $font-family;
-	color: $font-color;
+    font-family: $font-family;
+    color: $font-color;
 }
 
 a{
-	text-decoration: none;
+    text-decoration: none;
+    color: $base-color;
+    transition: all .3s;
+    &:hover {
+        color: darken($base-color, 10);
+        text-decoration: underline;
+    }
 }
 
-h1{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(30);// valor 	en pixeles
+iframe {
+    overflow: hidden;
+    border: none;
 }
 
-h2{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(26);// valor 	en pixeles
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-family;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    color: $base-color;
 }
 
-h3{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(22);// valor 	en pixeles
-}
+h1{ @include fontSize(30);}
 
-h4{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(18);// valor 	en pixeles
-}
+h2{ @include fontSize(28);}
 
-h5{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(16);// valor 	en pixeles
-}
+h3{ @include fontSize(24);}
 
-h6{
-	color: darken($secondary-color,5%);
-	margin-bottom: 0.75rem;
-	@include fontSize(12);// valor 	en pixeles
-}
+h4{ @include fontSize(20);}
+
+h5{ @include fontSize(18);}
+
+h6{ @include fontSize(16);}
 
 p{
-	margin-bottom: 1rem;
-	font-size: $font-size;
+    margin-bottom: 1rem;
+    font-size: $font-size;
 }
 
 article{
-	text-align: left;
+    text-align: justify;
 }
 
 
 img{
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-/*para verificar el item seleccionado del menu*/
-li.current-menu-item,.page_item{
-	color: $base-color !important;
-
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .bg-basecolor{
-	background-color:$base-color;
+    background-color:$base-color;
 }
 
 .radius {
-	border-radius: $radius;
+    border-radius: $radius;
+}
+
+.gray-color {
+    color: $font-color;
+}
+.bg-color {
+    background-color: $bg-color;
+}
+
+.padding-top {
+    padding-top: 1rem;
+    &--small{
+        padding-top: 1rem;
+        @include media-query('tablet') {
+            padding-top: 0;
+        }
+    }//END MEDIA QUERY
+
+    &--medium{
+        padding-top: 0;
+        @include media-query('tablet') {
+            padding-top: 1rem;
+        }
+        @include media-query('desktop') {
+            padding-top: 0;
+        }
+    }//END MEDIA QUERY
+}
+
+.padding-right {
+    padding-right: 1rem;
+    &--small{
+        padding-right: 1rem;
+        @include media-query('tablet') {
+            padding-right: 0;
+        }
+    }//END MEDIA QUERY
+
+    &--medium{
+        @include media-query('tablet') {
+            padding-right: 2rem;
+        }
+        @include media-query('desktop') {
+            padding-right: 0;
+        }
+    }//END MEDIA QUERY
+
+    &--large{
+        @include media-query('desktop') {
+            padding-right: 2rem;
+        }
+    }//END MEDIA QUERY
+}//END PADDING RIGHT
+
+.padding-left {
+    padding-left: 2rem;
+    &--small{
+        padding-left: 2rem;
+        @include media-query('tablet') {
+            padding-left: 0;
+        }
+    }//END MEDIA QUERY
+
+    &--medium{
+        @include media-query('tablet') {
+            padding-left: 2rem;
+        }
+        @include media-query('desktop') {
+            padding-left: 0;
+        }
+    }//END MEDIA QUERY
+
+    &--large{
+        @include media-query('desktop') {
+            padding-left: 2rem;
+        }
+    }//END MEDIA QUERY
+}//END PADDING LEFT
+
+
+.responsive-embed {
+    margin-bottom: 0;
+}
+
+.row {
+    max-width: $max-width;
+    &--padding-top {
+        padding-top: 3rem;
+    }
+    &--padding-bottom {
+        padding-bottom: 2rem;
+    }
+}
+
+.border-right-dashed {
+    border-right: none;
+    @include media-query('desktop') {
+        border-right: 2px dashed $font-color;
+    }
+}
+
+.hide-text {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    color: transparent;
+}
+
+.google-map {
+    position: relative;
+    padding-bottom: 70%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    @include media-query('tablet') {
+        padding-bottom: 50%; // This is the aspect ratio
+    }
+
+    @include media-query('desktop') {
+        padding-bottom: 30%; // This is the aspect ratio
+    }
+}
+
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
 }

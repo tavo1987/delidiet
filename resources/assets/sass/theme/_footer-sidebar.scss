@@ -1,0 +1,88 @@
+/*
+    ====================================================================
+        $FOOTER SIDE BAR
+    ====================================================================
+*/
+
+.footer-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query('tablet') {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }// END MEDIA QUERY
+
+
+    .widget-container {
+        order: 1;
+        @include media-query('tablet') {
+            order: 0;
+            display: flex;
+            flex-direction: column;
+            width: 31.33%;
+            widget-title {
+                text-align: right;
+            }
+        }// END MEDIA QUERY
+    }//END CONTAINER WIDGET
+
+    .widget-container:last-child {
+        order: 0;
+        @include media-query('tablet') {
+            text-align: right;
+        }// END MEDIA QUERY
+    }//END WIDGET CONTAINER
+
+    .wpcf7-response-output {
+        margin-top: .5rem;
+        @include media-query('tablet') {
+            max-width: 250px;
+            line-height: 1;
+            margin-top: 0;
+            margin-left: auto;
+        }
+    }
+
+    .menu {
+        display: none;
+
+        @include media-query('tablet') {
+            display: block;
+            text-align: left;
+        }// END MEDIA QUERY
+
+        a{
+            @include fontSize(15);
+            padding: .5rem 0;
+            line-height: 1;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $black;
+            transition: all .3s;
+            &:hover {
+                padding-left: .25rem;
+                text-decoration: none;
+                color: $base-color;
+            }
+        }
+    }//END MENU
+
+    .widget-title {
+        color: $font-color;
+        font-weight: 500px;
+        text-transform: uppercase;
+    }
+
+    form {
+        padding: 0;
+        background: initial;
+        input[type="email"] {
+            border: 2px solid $font-color;
+        }
+    }
+}//END FOOTER SIDE BAR
+
+

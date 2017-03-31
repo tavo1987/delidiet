@@ -1,2 +1,4 @@
 *
 !.gitignore
+!headroom.js
+!light-youtube-embeds.js

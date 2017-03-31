@@ -87,17 +87,18 @@ hr.clear {
 
 .wp-caption {
     background: #fff;
-    border: 1px solid #f0f0f0;
+    border: 1px solid lighten($font-color, 20);
     max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
     text-align: center;
+    padding: .5rem;
 }
 
 .wp-caption-text {
-    font-size: 11px;
+    @include fontSize(12);
     line-height: 17px;
     margin: 0;
-    padding: 0 4px 5px;
+    padding: .75rem 0 .5rem;
+    text-align: justify;
 }
 
 /* img.img {
@@ -111,3 +112,11 @@ img.img-small {
 img.img-medium {
   padding: .75rem;
 } */
+
+@media screen and (max-width: 782px) {
+    #wpadminbar {
+        height: 46px;
+        min-width: 300px;
+        position: fixed;
+    }
+}

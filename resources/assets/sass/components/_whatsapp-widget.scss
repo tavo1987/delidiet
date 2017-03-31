@@ -1,0 +1,55 @@
+/*
+    ====================================================================
+        $WHATSAPP INFO1
+    ====================================================================
+*/
+
+.whatsapp-widget {
+    padding: .5rem .5rem .5rem 4rem;
+    position: relative;
+    display: inline-block;
+
+    a {
+        text-decoration: none;
+        color: $font-color;
+        transition: all .3s;
+        &:hover {
+            color: $base-color
+        }
+    }
+
+    .icon-whatsapp {
+        position: absolute;
+        left: 0;
+        @include verticalAlign();
+    }
+
+    .icon-whatsapp:before {
+        font-size: 3.5rem;
+    }
+
+    &__item {
+        display: block;
+        line-height: 1.1;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+
+    &__number {
+        font-weight: bold;
+        font-size: 1.85rem;
+    }
+
+    &--footer {
+        margin-bottom: 2rem;
+
+        @include media-query('tablet') {
+            margin-top: 1.25rem;
+            margin-bottom: 0;
+        }
+    }
+}//END WHATSAPP INFO
+

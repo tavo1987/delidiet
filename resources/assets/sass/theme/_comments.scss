@@ -5,6 +5,12 @@
   COMMENTS
 ===================================================================*/
 
+#comments {
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 $total-gutter / 2;
+    margin-top: 2rem;
+}
 
 #comments-title{
     color: #000;
@@ -15,10 +21,14 @@
     margin-bottom: 0 !important;
 }
 
+.comments {
+    margin-bottom: 1rem;
+}
+
 //contenedor de loas cometanrios
 .commentlist{
     margin-left: 0;
-    padding-left: 0 !important;
+    padding: 1rem !important;
 }
 
 //items o comentarios
@@ -39,7 +49,7 @@
 }
 
 .comment-author {
-    margin-top: 5px;
+    margin-top: .75rem;
     font-size: .85rem;
   //text del nombre o alias
     .fn{
@@ -52,6 +62,10 @@
 //avatar
 .comment-author img{
     border-radius: 50%;
+}
+
+.comment-respond {
+    margin-bottom: 1rem;
 }
 
 //respuesta
@@ -73,10 +87,14 @@
     }
 }
 
+.comment-body .children {
+    margin-top: 1rem;
+}
+
 //para el comentaio o parrrafo
 .comment-body > p{
-    background:rgba($base-color,.2);
-    color: #666;
+    background:rgba($base-color,.9);
+    color: $white;
     padding:.3rem 1rem;
     border-radius: 5px;
     margin: .75rem 0;
@@ -87,7 +105,7 @@
         content: "";
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-        border-bottom: 12px solid #D0F1F0;
+        border-bottom: 12px solid rgba($base-color, .9);
         position: absolute;
         right: 100%;
         bottom: 100%;
@@ -97,13 +115,13 @@
 
 
 .depth-1, .depth-2, .depth-3, .depth-4 {
-    border-top:1px dashed rgba(black,.3) !important;
+    border-top:none;
     border-radius: 4px;
 }
 
 //titulo del formulario para comentar
 .comment-reply-title{
-    border-top: 1px dashed rgba(black,.3);
+    border-top: none;
     color: #000 !important;
     padding-top: 1rem !important;
 }
@@ -116,7 +134,7 @@
 //formulario
 
 .comment-form{
-    width: 75%;
+    width: 100%;
     //nota
     .comment-notes{
         font-size: .8rem;

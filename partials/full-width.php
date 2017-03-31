@@ -1,26 +1,27 @@
 <?php
 /**
  * Template Name: Full Width
- *
- * @package Shift
- * @subpackage shift-press
- * @since shift press 1.0
  */
 ?>
 <?php get_header(); ?>
-<section id="content" role="main">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="header">
-				<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-			</header>
-			<section class="entry-content">
-				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-				<?php the_content(); ?>
-				<div class="entry-links"><?php wp_link_pages(); ?></div>
-			</section>
-		</article>
-		<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-	<?php endwhile; endif; ?>
-</section>
+    <section class="sp-page full-width" role="main">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php if ( has_post_thumbnail() ):?>
+                    <header class="sp-page__header" data-page-featured-image="<?php echo get_the_post_thumbnail_url() ?>">
+                        <h1 class="sp-page__title"><?php the_title(); ?></h1>
+                    </header>
+                <?php else: ?>
+                    <header class="sp-page__header bg-color">
+                        <h1 class="sp-page__title"><?php the_title(); ?></h1>
+                    </header>
+                <?php endif; ?>
+
+                <div class="sp-page__content sp-page__content--full-width">
+                    <?php the_content(); ?>
+                </div><!--./ END CONTENT-->
+            </article>
+        <?php endwhile; endif; ?>
+    </section>
 <?php get_footer(); ?>
+

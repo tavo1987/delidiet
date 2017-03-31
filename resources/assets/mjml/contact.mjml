@@ -1,0 +1,48 @@
+<mjml>
+  <mj-body>
+    <mj-container background-color="#F5F5F0" font-size="13px">
+      <mj-section hidden="false" locked="true" full-width="full-width" padding-bottom="20" padding-top="20">
+        <mj-column vertical-align="middle" width="66.66666666666666%">
+          <mj-text align="left" color="#000000" font-size="11" word-wrap="break-word" font-family="Ubuntu, Helvetica, Arial, sans-serif" locked="true" editable="true" vertical-align="middle" padding-left="25" padding-right="25" padding-bottom="0" padding-top="0">
+            <span style="font-size: 11px">DELIDIET</span>
+          </mj-text>
+        </mj-column>
+        <mj-column vertical-align="middle" width="33.33333333333333%">
+          <mj-text align="right" color="#000000" font-size="11" word-wrap="break-word" font-family="Ubuntu, Helvetica, Arial, sans-serif" locked="true" editable="false" vertical-align="middle" padding-left="25" padding-right="25" padding-bottom="0" padding-top="0">
+            <span style="font-size: 11px"><a href="http://deli-diet.com" target="_blank" style="text-decoration: none; color: inherit">www.deli-diet.com</a></span>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#ffffff" hidden="false" vertical-align="middle" name="Section-A" image-id="19872" background-url="http://www.deli-diet.com/wp-content/uploads/backlground-header-email.jpg" background-size="cover" padding-bottom="0" padding-top="0">
+        <mj-column vertical-align="middle" width="100%">
+          <mj-image src="http://www.deli-diet.com/wp-content/uploads/logo-delidiet.png" alt="" align="center" border="none" vertical-align="middle" width="210" padding-left="25" padding-right="25" padding-bottom="60" padding-top="60">
+
+          </mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#ffffff" hidden="false" name="Nouvelle section" padding-bottom="20" padding-top="10">
+        <mj-column vertical-align="top" width="100%">
+          <mj-text align="center" color="#000000" font-size="13" word-wrap="break-word" font-family="Ubuntu, Helvetica, Arial, sans-serif" vertical-align="top" padding-left="25" padding-right="25" padding-bottom="0" padding-top="10">
+            <span style="display: block; font-size: 28px; font-weight: bold;"><span style="font-size:14.666666666666666px;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong><span style="font-size: 20px;"><span style="color: rgb(81, 45, 11);">Hola [your-name]!</span></span>
+            </strong>
+            </span>
+            </span>
+          </mj-text>
+          <mj-text align="center" color="#000000" font-size="13" word-wrap="break-word" font-family="Ubuntu, Helvetica, Arial, sans-serif" vertical-align="top" padding-left="25" padding-right="25" padding-bottom="0" padding-top="0">
+            <p style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:14.666666666666666px;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><span style="font-size: 16px;">Gracias por contactarnos con nosotros</span></span>
+            </p>
+            <p style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:14.666666666666666px;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><span style="font-size: 16px;">en breve nos contactaremos contigo. </span></span>
+            </p>
+          </mj-text>
+          <mj-text align="center" color="#000000" font-size="13px" word-wrap="break-word" font-family="Ubuntu, Helvetica, Arial, sans-serif" vertical-align="top" padding-left="25" padding-right="25" padding-bottom="10" padding-top="10">
+            <p></p>
+            <p style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:14.666666666666666px;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Gracias,</span></p>
+            <span
+              style="font-size:14.666666666666666px;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">DELIDIET</span>
+              <p></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
