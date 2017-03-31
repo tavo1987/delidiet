@@ -15,7 +15,8 @@ var gulp         = require('gulp'),
     postcss      = require('gulp-postcss'),
     cssnano      = require('cssnano'),
     assets       = require('postcss-assets'),
-    lost         = require('lost');
+    lost         = require('lost'),
+    mqpacker     = require('css-mqpacker');
 
 
 var postcssPlugins = [
@@ -25,6 +26,7 @@ var postcssPlugins = [
         cachebuster: true
     }),
     lost,
+    mqpacker,
     cssnano({
       autoprefixer: {
         add:true,
