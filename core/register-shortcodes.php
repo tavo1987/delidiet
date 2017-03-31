@@ -133,6 +133,14 @@ add_shortcode('sp_plus_button', 'plusButton');
     require_once 'shortcodes/WhatsAppWidget.php';
     $whatsappWidget = new WhatsAppWidget();
 
+/*
+    ==================================================================
+        YOUTUBE VIDEO
+    ==================================================================
+*/
+    require_once 'shortcodes/YoutubeVideo.php';
+    $youtube = new YoutubeVideo();
+
 
 /**
  * Formating all shortcodes scapping auto <p></p>
