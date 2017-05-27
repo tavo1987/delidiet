@@ -6,7 +6,7 @@
                 <?php get_sidebar('footer'); ?>
 
                 <div class="copyright">
-                    <?php echo sprintf( __( '&#174;Powered by %1$s.', 'shiftpress' ), '<a href="">Gestión</a>' ); ?>
+                    <?php echo sprintf( __( '&#174;Powered by %1$s.', 'shiftpress' ), '<a href="http://www.gestionpublicidad.com/web" target="_blank">Gestión</a>' ); ?>
                 </div>
             </div>
         </div>
