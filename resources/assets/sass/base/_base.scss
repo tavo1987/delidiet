@@ -221,5 +221,10 @@ ul{
             width: 100% !important;
         }
     }
+
+    &--align-center {
+        display: flex;
+        justify-content: center;
+    }
 }
 
